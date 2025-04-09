@@ -1,0 +1,9 @@
+Công ty TNHH Công Nghệ AME thành lập theo Luật công ty Việt Nam với Giấy phép đăng ký kinh doanh số 319494/24 do Sở KH&ĐT Hà Nội cấp ngày 26/09/2024 cấp, chuyên sâu sản xuất giải pháp tổng thể về công nghệ thông tin và viễn thông. Với muc tiêu cung cấp phần mềm chất lượng cao, tối ưu hóa quy trình công việc, tăng năng suất và tiết kiệm chi phí. Cùng với sự phát triển của ngành Viễn thông và Tin học, AME TECH. LTD cũng đã phát triển mạnh mẽ cả về cơ sở vật chất, khoa học công nghệ và năng lực cán bộ. 
+
+"     Hiện nay AME TECH. LTD định hướng vào các dịch vụ tin học viễn thông mới, tiên tiến và những ứng dụng công nghệ cao. Từ giai đoạn đầu hoạt động AME TECH. LTD đã chú trọng công tác tuyển dụng và đào tạo các cán bộ cho các ứng dụng chuyên sâu và mở rộng, trong đó bao gồm các thạc sĩ, kỹ sư phần mềm, phần cứng được đào tạo trong nước và ngoài nước, có kinh nghiệm triển khai các dự dự án thực tế. 
+
+Sự phát triển mạnh mẽ của AME TECH. LTD đạt được nhờ vào chất lượng sản phẩm và dịch vụ mà công ty cung cấp cho khách hàng và được chứng minh bởi uy tín cuả công ty đối với các khách hàng của mình.   
+
+AME TECH. LTD có một tập thể nhân viên đoàn kết, lao động quên mình, có kỷ luật và phong cách làm việc theo tinh thần đồng đội, có khả năng làm chủ, nắm bắt nhanh các công nghệ mới, chủ động sáng tạo trong nghiên cứu ứng dụng, chuyển giao công nghệ sản  xuất. Đội ngũ nhân sự của AME TECH. LTD là nhân tố quan trọng, là nguồn nhân lực luôn luôn sẵn sàng hoàn thành xuất sắc các công việc được giao, phục vụ tận tụy và làm hài lòng khách hàng, là vốn quý nhất của  AME TECH. LTD để ngày càng phát triển lớn mạnh.
+
+AME TECH. LTD có quan hệ hợp tác với nhiều đối tác ngành viễn thông và tin học trong nước định hướng sẽ mở rộng thị trường ra các nước khác trên thế giới. Các mối quan hệ này hỗ trợ cho AME TECH. LTD nắm bắt được các công nghệ mới và có đủ khả năng thực hiện được các dự án lớn.
