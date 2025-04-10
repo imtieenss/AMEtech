@@ -3,33 +3,26 @@ import LOGO_BINH_MINH from "../assets/images/logoProfile/logoBinhMinh.png";
 import LOGO_AME from "../assets/images/logoProfile/logoAME.png";
 import LOGO_TECA from "../assets/images/logoProfile/Logo_teca.png";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import ReactMarkdown from 'react-markdown';
+
+
 
 const ProfilePage: React.FC = () => {
     //Giới thiệu cty 
-    const [text1, setText1] = useState('');
-    useEffect(() => {
-        // Fetch or import the .md file
-        fetch('/src/assets/text/gioi-thieu-cty.md')
-        .then(response => response.text())
-        .then(text => setText1(text))
-        .catch(error => console.error('Error loading markdown:', error));
-    }, []);
+
 
     return (
         <>
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-200">
 
             {/* text đoạn đầu */}
-            <div className="container mx-auto px-[120px] py-[30px]  flex flex-row gap-x-4 ">
+            <div className="container px-[40px] md:px-[120px] py-[30px]  grid grid-cols-1 md:grid-cols-3  gap-x-4 ">
                 {/* text */}
-                <div className="container mx-auto mt-30 px-6 py-16 text-left w-2/3"> 
+                <div className=" md:col-span-2 mx-auto mt-30 px-6 py-16 text-center "> 
                     <motion.h1           
                     initial={{ opacity: 0, y: 50 }}  // Bắt đầu ẩn và nằm thấp
                     animate={{ opacity: 1, y: 0 }}  // Hiện dần và bay lên
                     transition={{ duration: 1 }}
-                    className="text-4xl md:text-4xl font-extrabold"
+                    className="text-4xl md:text-4xl font-extrabold text-left"
                     >
                         <span className="bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent">
                         Chúng tôi một doanh nghiệp trẻ<br/> với phương châm kinh doanh
@@ -48,7 +41,8 @@ const ProfilePage: React.FC = () => {
                     </motion.p>
                 </div>
 
-                <div className="container mx-auto mt-30 px-6 py-16 w-1/3 flex justify-items-center items-center ">
+                {/* logo */}
+                <div className="container mx-auto mt-30 px-6 py-16 flex justify-items-center items-center ">
                     <motion.img
                         src={LOGO_AME}
                         alt="LOGO_AME"
@@ -60,7 +54,7 @@ const ProfilePage: React.FC = () => {
             </div>
 
             {/* Giới thiệu công ty */}
-            <div>
+            <div className="px-[40px] md:px-[120px]">
                 <div className="container mx-auto  px-6 py-6 text-center text-4xl md:text-6xl font-extrabold"> 
                     <motion.h1
                         initial={{ opacity: 0, y: 50 }}
@@ -70,14 +64,41 @@ const ProfilePage: React.FC = () => {
                         Giới thiệu công ty
                     </motion.h1>
                 </div>
-                <motion.div 
+                <motion.p 
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.5 }}
                     className="container text-lg text-gray-500 mt-6 max-w-5xl mx-auto text-justify"
-                    > 
-                    <ReactMarkdown>{text1}</ReactMarkdown>
-                </motion.div>
+                    >
+                        Công ty TNHH Công Nghệ AME thành lập theo Luật công ty Việt Nam với Giấy phép 
+                        đăng ký kinh doanh số 319494/24 do Sở KH&ĐT Hà Nội cấp ngày 26/09/2024 cấp, 
+                        chuyên sâu sản xuất giải pháp tổng thể về công nghệ thông tin và viễn thông. 
+                        Với muc tiêu cung cấp phần mềm chất lượng cao, tối ưu hóa quy trình công việc, 
+                        tăng năng suất và tiết kiệm chi phí. Cùng với sự phát triển của ngành Viễn thông 
+                        và Tin học, AME TECH. LTD cũng đã phát triển mạnh mẽ cả về cơ sở vật chất, khoa học 
+                        công nghệ và năng lực cán bộ. <br/>
+                        Hiện nay AME TECH. LTD định hướng vào các dịch vụ tin học viễn thông mới, tiên tiến 
+                        và những ứng dụng công nghệ cao. Từ giai đoạn đầu hoạt động AME TECH. LTD đã chú 
+                        trọng công tác tuyển dụng và đào tạo các cán bộ cho các ứng dụng chuyên sâu và mở 
+                        rộng, trong đó bao gồm các thạc sĩ, kỹ sư phần mềm, phần cứng được đào tạo trong nước 
+                        và ngoài nước, có kinh nghiệm triển khai các dự dự án thực tế.<br/>
+                        Sự phát triển mạnh mẽ của AME TECH. LTD đạt được nhờ vào chất lượng sản phẩm và dịch 
+                        vụ mà công ty cung cấp cho khách hàng và được chứng minh bởi uy tín cuả công ty 
+                        đối với các khách hàng của mình.<br/>
+
+                        AME TECH. LTD có một tập thể nhân viên đoàn kết, lao động quên mình, có kỷ luật và phong cách 
+                        làm việc theo tinh thần đồng đội, có khả năng làm chủ, nắm bắt nhanh các công nghệ mới, chủ động 
+                        sáng tạo trong nghiên cứu ứng dụng, chuyển giao công nghệ sản  xuất. Đội ngũ nhân sự của AME TECH. LTD 
+                        là nhân tố quan trọng, là nguồn nhân lực luôn luôn sẵn sàng hoàn thành xuất sắc các công việc được giao, 
+                        phục vụ tận tụy và làm hài lòng khách hàng, là vốn quý nhất của  AME TECH. LTD để ngày càng phát triển lớn mạnh.<br/>
+
+                        AME TECH. LTD có quan hệ hợp tác với nhiều đối tác ngành viễn thông và tin học 
+                        trong nước định hướng sẽ mở rộng thị trường ra các nước khác trên thế giới. Các mối quan
+                         hệ này hỗ trợ cho AME TECH. LTD nắm bắt được các công nghệ mới và có đủ khả năng thực hiện được các dự án lớn.<br/>
+
+
+                    {/* <ReactMarkdown>{text1}</ReactMarkdown> */}
+                </motion.p>
 
             </div>
 
@@ -86,7 +107,7 @@ const ProfilePage: React.FC = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.5 }}
-                className=" px-[120px] py-[30px] "
+                className=" px-[40px] md:px-[120px] py-[30px] "
                 >
                 <div className="container mx-auto  px-6 py-6 text-center text-4xl md:text-6xl font-extrabold"> 
                     <h1 className="bg-gradient-to-r from-orange-500 to-purple-600  bg-clip-text   text-transparent">
@@ -105,7 +126,7 @@ const ProfilePage: React.FC = () => {
             </motion.div>
 
             {/* Các công việc */}
-            <div className="container mx-auto px-[150px] py-12 grid grid-cols-1 md:grid-cols-3 gap-[50px]  ">
+            <div className="container mx-auto px-[60px] md:px-[150px] py-12 grid grid-cols-1 md:grid-cols-3 gap-[50px]  ">
             
                 {/* 1 */}
                 <div className="relative">

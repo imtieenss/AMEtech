@@ -1,68 +1,106 @@
+import { FaCalendarAlt, } from "react-icons/fa";
 
 
-import TECH_CONSULTING_1 from "../assets/images/logoService/1_Technology_consulting.png"
-import RESEARCH_2 from "../assets/images/logoService/2_Research_and_development.png"
-import PROJECT_3 from "../assets/images/logoService/3_project_management.png"
-import TEST_4 from "../assets/images/logoService/4_Test.png"
-import MAINTENANCE_5 from "../assets/images/logoService/5_maintenance_and_operation.png"
-import SECURITY_6 from "../assets/images/logoService/6_security.png"
+
+import BHXH from "../assets/images/Produce/BHXH.png"
+import BCDC from "../assets/images/Produce/Binh_chủng_đặc_công.jpg"
+import THADS from "../assets/images/Produce/Thi_hành_án_DS.jpg"
+import QLTT from "../assets/images/Produce/Quản_lý_tư_tưởng.jpg"
+
+import { motion } from "framer-motion";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Pagination } from "swiper/modules";
 
 
-const softData = [
+
+const projects = [
     {
-        id:"1",
-        title: "Tư vấn công nghệ",
-        icon: TECH_CONSULTING_1,
+      title: "Phần mềm hỗ trợ quản lý và kê khai chi phí khám chữa bệnh BHYT",
+      date: "14/04/2023",
+      image: BHXH, 
     },
     {
-        id:"2",
-        title: "Nghiên cứu và phát triển",
-        icon: RESEARCH_2,
-        
+      title: "Phần mềm phục vụ công tác chỉ huy điều hành tại Binh Chủng Đăc Công",
+      date: "19/08/2021",
+      image: BCDC,
     },
     {
-        id:"3",
-        title: "Quản lý dự án",
-        icon: PROJECT_3,
-        
-    }, 
-    {
-        id:"4",
-        title: "Kiểm thử phần mềm",
-        icon: TEST_4,
+      title: "Phần mềm quản lý CSDL thi hành án dân sự trong Quân đội",
+      date: "19/08/2021",
+      image: THADS,
     },
     {
-        id:"5",
-        title: "Xây dựng, vận hành <br/> và bảo trì sản phẩm",
-        icon: MAINTENANCE_5,
+        title: "Phần mềm quản lý tư tưởng Bộ Đội",
+        date: "19/08/2021",
+        image: QLTT,
     },
     {
-        id:"6",
-        title: "Đảm bảo an toàn bảo mật",
-        icon: SECURITY_6,
-    },
-];
-
-
+        title: "Phần mềm hỗ trợ quản lý và kê khai chi phí khám chữa bệnh BHYT",
+        date: "14/04/2023",
+        image: BHXH, 
+      },
+      {
+        title: "Phần mềm phục vụ công tác chỉ huy điều hành tại Binh Chủng Đăc Công",
+        date: "19/08/2021",
+        image: BCDC,
+      },
+      {
+        title: "Phần mềm quản lý CSDL thi hành án dân sự trong Quân đội",
+        date: "19/08/2021",
+        image: THADS,
+      },
+      {
+          title: "Phần mềm quản lý tư tưởng Bộ Đội",
+          date: "19/08/2021",
+          image: QLTT,
+      },
+  ];
 
 
 
 const ProducePage: React.FC = () => {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-white   mt-[70px]">
+            
+            <div className="container mt-[80px] text-black text-center   px-[40px] md:px-[120px] ">
+                <h2 className="text-4xl md:text-6xl font-bold"> 
+                    <span className="bg-gradient-to-r from-orange-500 to-purple-500 text-transparent bg-clip-text">
+                        Một số sản phẩm web nổi bật
+                    </span>
+                </h2>
+            </div>
 
-            <div className="container grid grid-cols-1 md:grid-cols-3 gap-6 text-center mx-auto px-[120px] " >
-                {softData.map((soft,id) => (
-                    <div key={id} className=" flex flex-col  items-center  rounded-lg   h-[200px] bg-amber-300 ">
-                        <img
-                            src={soft.icon}
-                            alt="soft.icon"
-                            className=" flex justify_center items-center w-[120px] "
-                        />
-                        <h3 className="text-lg font-semibold mt-5">{soft.title}</h3>
+
+            <div className="px-[40px] md:px-[150px] grid grid-cols-1 md:grid-cols-3  gap-10  mx-auto  mt-[100px] ">
+                {projects.map((project, index) => (
+                <div key={index} className="flex flex-col">
+                    <motion.img
+                        src={project.image}
+                        alt={project.title}
+                        className=" object-cover aspect-[4/3] shadow-md  "  //w-full h-[250px] object-cover
+                        whileHover={{ scale: 1.2 } }
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                    />
+                    <h3 className="text-xl font-bold mt-4">{project.title}</h3>
+                    <div className="flex items-center text-[#91ff00ae] mt-2 mb-[50px]">
+                        <FaCalendarAlt className="mr-2 text-black" />
+                        <span className="text-black  ">{project.date}</span>
                     </div>
+                    
+                </div>
                 ))}
             </div>
+
+
+
+
+
+            
 
         </div>
     );

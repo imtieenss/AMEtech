@@ -13,8 +13,6 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     };
 
-    
-
     useEffect(() => {
         const handleResize = () => {
             setIsOpen(window.innerWidth >= 768);
@@ -26,7 +24,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className="w-full fixed top-0 left-0 z-50 bg-white/30 backdrop-blur-lg shadow-md">
+        <nav className="w-full fixed top-0 left-0 z-50 bg-white/30 md:backdrop-blur-lg shadow-md  ">
             <div className="container mx-auto flex items-center justify-between md:justify-center gap-x-35 p-3 relative">
                 {/* LOGO - Điều hướng về trang chủ */}
                 <Link to="/" onClick={() => navigate("/")}>
@@ -45,7 +43,7 @@ const Navbar = () => {
                 <ul
                     className={`flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8
                                 absolute md:static top-[100%] left-0 w-full md:w-auto 
-                                bg-white md:bg-transparent shadow-md md:shadow-none 
+                                bg-gray-700 md:bg-transparent shadow-md md:shadow-none 
                                 p-5 md:p-0 rounded-lg md:rounded-none
                                 transition-all duration-300 
                                 ${isOpen ? "backdrop-blur-lg bg-white/50 border border-white/10 md:backdrop-blur-none md:bg-transparent md:border-0" : "hidden md:flex"}
@@ -61,7 +59,7 @@ const Navbar = () => {
                                 }}
                                 className={`menu-item text-[18px] font-bold transition cursor-pointer tracking-wide md:tracking-wider
                                     ${location.pathname === item.to
-                                        ? "text-transparent bg-clip-text bg-gradient-to-r from-[#0055cb] to-[#0a2bde]"
+                                        ? "text-transparent bg-clip-text bg-gradient-to-r from-[#2faf01] to-[#046b00]"
                                         : "text-gray-700 hover:text-gray-900"
                                     }`}
                             >
@@ -74,7 +72,8 @@ const Navbar = () => {
                 {/* Call to Action Button */}
                 <button
                     onClick={() => navigate("/contactPage")}
-                    className="hidden md:block h-12 text-[15px] font-medium text-white bg-gradient-to-r from-[#539afb] to-[#0a2bde] rounded-full px-9 transition-transform duration-300 ease-in-out hover:scale-110">
+                    className="hidden md:block h-12 text-[17px] font-medium text-white bg-gradient-to-r from-[#02b408] to-[#dd021cf9] 
+                        rounded-full px-9 transition-transform duration-300 ease-in-out hover:scale-110">
                     Hotline : 0976618962
                 </button>
             </div>

@@ -7,7 +7,7 @@ import Footer from "./components/footer";
 import ProfilePage from "./page/profilePage";
 import ProducePage from "./page/producePage";
 import ServicePage from "./page/servicePage";
-import SolutionPage from "./page/solutionPage";
+// import SolutionPage from "./page/solutionPage";
 import Icons from "./components/icon"
 
 const App: React.FC = () => {
@@ -21,7 +21,7 @@ const App: React.FC = () => {
                     <Route path="/profilePage" element={<ProfilePage />} />
                     <Route path="/producePage" element={<ProducePage />} />
                     <Route path="/servicePage" element={<ServicePage />} />
-                    <Route path="/solutionPage" element={<SolutionPage />} />
+                    {/* <Route path="/solutionPage" element={<SolutionPage />} /> */}
                     <Route path="/contactPage" element={<ContactPage />} />
                     <Route path="*" element={<div>NotFoundPage</div>} /> 
                 </Routes>

@@ -11,6 +11,7 @@ import CAM_GIAO_THONG from "../assets/images/logoService/CAM_giao_thong.png"
 import CAM_ICON from "../assets/images/logoService/CAM_icon.png"
 import CAM_NHA_MAY from "../assets/images/logoService/CAM_nha_may.png"
 import MAN_HINH from "../assets/images/logoService/Man_hinh_to.png"
+import HOI_NGHI from "../assets/images/logoService/hoi_nghi_truyen_hinh.png"
 
 
 
@@ -23,24 +24,24 @@ const ServicePage: React.FC = () => {
 
 
             {/* luôn đồng hành cùng khách hàng */}
-            <div className="  mx-auto px-[170px] pt-[260px] pb-[210px] text-center md:text-left bg-white ">
-                <h1 className="text-2xl md:text-5xl font-bold leading-tight">
+            <div className="  mx-auto px-[40px] md:px-[170px] pt-[260px] pb-[210px] text-center md:text-left bg-white ">
+                <h1 className="text-2xl md:text-5xl text-left font-bold leading-tight ">
                  <span className="bg-gradient-to-r from-green-600 via-red-900 to-orange-600 text-transparent bg-clip-text">
                  Chúng tôi luôn đồng hành cùng<br /> khách hàng 
                  tạo ra những sản phẩm tốt nhất
                 </span>
                 </h1>
 
-                <p className="mt-4 text-2xl md:w-3/4 text-justify ">
+                <p className="mt-4 text-xl md:text-2xl md:w-3/4 text-justify font-normal ">
                 Đáp ứng nhu cầu đa dạng của Khách hàng, AME tập trung vào nghiên cứu và phát triển công nghệ, triển khai các dự án cung cấp trang thiết bị 
-                và phần mềm với độ bảo mật cao các cơ quan quan trọng của Đảng và Nhà nước như: Cục tác chiến Bộ Quốc Phòng, cục kế hoạch đầu tư, 
-                Binh chủng đặc công, Tổng cục chính trị, Thư viện Quân đội… Khai thác, viết và triển khai các phần mềm dịch vụ.
+                và phần mềm với độ bảo mật cao các cơ quan quan trọng của Đảng và Nhà nước như: Cục Tác chiến Bộ Quốc Phòng, Cục Kế hoạch Đầu tư, 
+                Binh chủng Đặc công, Tổng cục chính trị, Thư viện Quân đội… Khai thác, viết và triển khai các phần mềm dịch vụ.
                 </p>
             </div>
 
             {/* chuyển đổi số */}
-            <div className="container   mx-auto px-[120px] pt-[80px] mb-[100px]">
-                <h2 className="text-6xl text-center font-bold text-black">
+            <div className="container   mx-auto px-[40px] md:px-[120px]  pt-[80px] mb-[100px]">
+                <h2 className="text-4xl md:text-6xl text-center font-bold text-black">
                         Cung cấp <br />
                         <span className="bg-gradient-to-r from-orange-500 to-purple-500 text-transparent bg-clip-text">
                         Dịch vụ chuyển đổi số 
@@ -76,9 +77,9 @@ const ServicePage: React.FC = () => {
             </div>
             
             {/* máy chủ */}
-            <div className=" text-left  mx-auto mt-[100px] pb-[90px] px-[190px] bg-white pt-[70px] ">
+            <div className=" mx-auto mt-[100px] pb-[90px]   px-[40px] md:px-[190px]   bg-white pt-[70px] ">
                 <div className="text-black text-center ">
-                    <h2 className="text-6xl font-bold">
+                    <h2 className="text-5xl md:text-6xl font-bold">
                         <span className="bg-gradient-to-r from-orange-500 to-purple-500 text-transparent bg-clip-text">
                         Hệ thống máy chủ và lưu trữ
                         </span>
@@ -103,15 +104,12 @@ const ServicePage: React.FC = () => {
             </div>
 
             {/* CAMERA */}
-            <div className="container mt-[80px] text-black text-center   px-[120px] ">
-                <h2 className="text-6xl font-bold"> 
+            <div className="container mt-[80px] text-black text-center   px-[40px] md:px-[120px] ">
+                <h2 className="text-4xl md:text-6xl font-bold"> 
                     <span className="bg-gradient-to-r from-orange-500 to-purple-500 text-transparent bg-clip-text">
                         Camera giám sát
                     </span>
                 </h2>
-                <p className="mt-[40px] text-xl text-gray-700 text-justify  ">
-                
-                </p>
             </div>
 
             {/* ẢNH CAM */}
@@ -128,9 +126,9 @@ const ServicePage: React.FC = () => {
             </div>
 
 
-            <div className=" text-left  mx-auto mt-[100px] pb-[90px] px-[190px] bg-white pt-[70px] ">
+            <div className=" text-left  mx-auto mt-[100px] pb-[90px] px-[40px] md:px-[190px] bg-white pt-[70px] ">
                 <div className="text-black text-center ">
-                    <h2 className="text-6xl font-bold">
+                    <h2 className="text-5xl md:text-6xl font-bold">
                         <span className="bg-gradient-to-r from-orange-500 to-purple-500 text-transparent bg-clip-text">
                         Màn hình hiển thị tấm lớn
                         </span>
@@ -150,8 +148,8 @@ const ServicePage: React.FC = () => {
             </div>
 
 
-            <div className="container mt-[80px] text-black text-center   px-[120px] ">
-                <h2 className="text-6xl font-bold"> 
+            <div className="container mt-[80px] text-black text-center   px-[40px] md:px-[120px] ">
+                <h2 className="text-4xl md:text-6xl font-bold"> 
                     <span className="bg-gradient-to-r from-red-800 to-orange-400 text-transparent bg-clip-text">
                     Hội nghị truyền hình
                     </span>
@@ -160,6 +158,13 @@ const ServicePage: React.FC = () => {
                 Ngày nay, với sự phát triển nhanh chóng của hạ tầng mạng băng rộng, dịch vụ Hội nghị truyền hình đang dần trở nên phổ biến trên thế giới cũng như ở Việt Nam. Giải pháp hội nghị truyền hình dựa trên công nghệ IP của Tanberd hỗ trợ nhiều giao thức (H.320, H.323, SIP, SCCP) cho phép triển khai hệ thống Hội nghị truyền hình tiên tiến nhưng vẫn tận dụng được cơ sở hạ tầng sẵn có.
                 </p>
             </div>
+            <div className="flex justify-center mt-[70px]">
+                    <img
+                        src={HOI_NGHI}
+                        alt="HOI_NGHI "
+                        //className="w-full max-w-lg"
+                    />
+                </div>
 
 
 
