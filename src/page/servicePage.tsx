@@ -44,13 +44,13 @@ const ServicePage: React.FC = () => {
                     transition={{ duration: 0.6 }}
                 >
                 <span className="bg-gradient-to-r from-green-600 via-red-900 to-orange-600 text-transparent bg-clip-text">
-                Chúng tôi luôn đồng hành cùng<br /> khách hàng 
+                Chúng tôi luôn đồng hành cùng  khách<br/> hàng 
                 tạo ra những sản phẩm tốt nhất
                 </span>
                 </motion.h1>
 
                 <motion.p 
-                    className="mt-4 text-xl md:text-2xl md:w-3/4 text-justify font-normal "
+                    className="mt-4 text-xl md:text-2xl md:w-4/5 text-justify font-normal "
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
