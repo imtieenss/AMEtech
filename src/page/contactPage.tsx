@@ -4,96 +4,71 @@
 // import LOGO from "../assets/images/logo.png"
 // import ZALO from "../assets/images/zalosvg.svg"
 // import { FaPhone,} from "react-icons/fa"
-
+import { motion } from "framer-motion";
 import { FaCalendarAlt, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 const ContactPage: React.FC = () => {
     return (
         <>
             <div className=" flex flex-col justify-center container mx-auto pt-[150px] ">
-                <h2 className="text-4xl font-bold text-center">Liên Hệ</h2>
+                <motion.h2 
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-4xl font-bold text-center"
+                >Liên Hệ</motion.h2>
                 
-                
-                 
-                {/*<section id="hero" className="relative container mx-auto px-8 pb-[150px] pt-[0px] md:pt-[80px]">
-                    
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="absolute inset-0 w-[100%] h-[80%] object-cover -z-10 scale-110 opacity-70"
-                        style={{ transform: "scaleX(-1)" }}
-                    >
-                        <source src="videos/backdrop.mp4" type="video/mp4" />
-                    </video>
-
-                    
-                    <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-14 mt-[80px] md:mt-0">
-
-                        <div className="w-full lg:w-1/2 flex justify-center">
-                            <img
-                                src={LOGO}
-                                alt="HomePage_Pic"
-                                className="homepage-pic max-w-full"
-                                
-                            />
-                        </div>
-
-                        
-                        <div className="w-full lg:w-1/2 flex justify-center">
-
-                            <div className=" flex flex-col items-center justify-center gap-[30px] w-full max-w-md  ">
-                                <a
-                                    href="tel:0976618962" 
-                                    className="flex items-center justify-center bg-green-500 text-white text-lg font-semibold py-3 rounded-full shadow-lg hover:bg-orange-400 transition gap-2 w-[300px] "
-                                >
-                                    <FaPhone size={24} />
-                                    0976618962
-                                </a>
-                                <a
-                                    href="https://zalo.me" target="_blank"
-                                    className="flex items-center justify-center bg-blue-50 text-back text-lg font-semibold py-3 rounded-full shadow-lg hover:bg-blue-200 transition gap-4 w-[300px]"
-                                >
-                                    <img src= {ZALO} alt="Zalo" className="w-8 h-8" />
-                                    Zalo
-                                </a>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </section> */}
 
 
                 <div className="px-[40px] md:px-[100px] py-10 grid md:grid-cols-2 gap-10 items-center">
                 {/* Left Content */}
                 <div className="py-[40px]">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-6">AME.TECH LOCATION</h2>
+                    <motion.h2 
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="text-2xl md:text-3xl font-bold mb-6"
+                    >AME.TECH LOCATION
+                    </motion.h2>
 
-                    <div className="flex items-start mb-3">
-                    <FaCalendarAlt className="text-xl mt-1 mr-3" />
-                    <div>
-                        <p>Monday - Saturday</p>
-                        <p className="text-sm text-gray-600">7:30 am - 17:00 pm</p>
-                    </div>
-                    </div>
+                    <motion.div 
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="flex items-start mb-3"
+                    >
+                        <FaCalendarAlt className="text-xl mt-1 mr-3" />
+                        <div>
+                            <p>Monday - Saturday</p>
+                            <p className="text-sm text-gray-600">7:30 am - 17:00 pm</p>
+                        </div>
+                    </motion.div>
 
-                    <div className="flex items-start mb-3">
-                    <FaMapMarkerAlt className="text-xl mt-1 mr-3" />
-                    <div>
-                        <p> Số 8 Khu N4 DA nhà ở Xuân Đỉnh, Ngõ 40, Đường Xuân La,<br/> Phường Xuân Tảo, Quận Bắc Từ Liêm, Hà Nội</p>
-                        <p className="text-sm text-gray-600">Address</p>
-                    </div>
-                    </div>
+                    <motion.div 
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="flex items-start mb-3"
+                    >
+                        <FaMapMarkerAlt className="text-xl mt-1 mr-3" />
+                        <div>
+                            <p> Số 8 Khu N4 DA nhà ở Xuân Đỉnh, Ngõ 40, Đường Xuân La,<br/> Phường Xuân Tảo, Quận Bắc Từ Liêm, Hà Nội</p>
+                            <p className="text-sm text-gray-600">Address</p>
+                        </div>
+                    </motion.div>
 
-                    <div className="flex items-center mb-3">
+                    <motion.div 
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="flex items-center mb-3"
+                    >
                     <FaPhoneAlt className="text-xl mr-3" />
                     <div>
                         <p>0976618962</p>
                         <p className="text-sm text-gray-600">Phone Number</p>
                     </div>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Google Map */}

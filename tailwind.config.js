@@ -16,6 +16,7 @@ module.exports = {
                 white: '#FBFBFB',
             },
             backgroundImage: {
+                
                 'gradient-primary': 'linear-gradient(to right, #f4a44f, #ac573f)',
             },
         },

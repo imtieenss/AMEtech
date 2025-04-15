@@ -8,11 +8,6 @@ import THADS from "../assets/images/Produce/Thi_hành_án_DS.jpg"
 import QLTT from "../assets/images/Produce/Quản_lý_tư_tưởng.jpg"
 
 import { motion } from "framer-motion";
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Navigation, Pagination } from "swiper/modules";
 
 
 
@@ -82,6 +77,7 @@ const ProducePage: React.FC = () => {
                         alt={project.title}
                         className=" object-cover aspect-[4/3] shadow-md  "  //w-full h-[250px] object-cover
                         whileHover={{ scale: 1.2 } }
+                        
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}

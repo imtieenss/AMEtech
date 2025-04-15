@@ -3,12 +3,19 @@ import LOGO_BINH_MINH from "../assets/images/logoProfile/logoBinhMinh.png";
 import LOGO_AME from "../assets/images/logoProfile/logoAME.png";
 import LOGO_TECA from "../assets/images/logoProfile/Logo_teca.png";
 import { motion } from "framer-motion";
-
-
+// import { useState, useEffect } from "react";
+// import ReactMarkdown from 'react-markdown';
 
 const ProfilePage: React.FC = () => {
-    //Giới thiệu cty 
-
+    // //Giới thiệu cty 
+    // const [text1, setText1] = useState('');
+    // useEffect(() => {
+    //     // Fetch or import the .md file
+    //     fetch('/src/assets/text/gioi-thieu-cty.md')
+    //     .then(response => response.text())
+    //     .then(text => setText1(text))
+    //     .catch(error => console.error('Error loading markdown:', error));
+    // }, []);
 
     return (
         <>
@@ -19,9 +26,9 @@ const ProfilePage: React.FC = () => {
                 {/* text */}
                 <div className=" md:col-span-2 mx-auto mt-30 px-6 py-16 text-center "> 
                     <motion.h1           
-                    initial={{ opacity: 0, y: 50 }}  // Bắt đầu ẩn và nằm thấp
-                    animate={{ opacity: 1, y: 0 }}  // Hiện dần và bay lên
-                    transition={{ duration: 1 }}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
                     className="text-4xl md:text-4xl font-extrabold text-left"
                     >
                         <span className="bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent">
@@ -30,8 +37,8 @@ const ProfilePage: React.FC = () => {
                     </motion.h1>
                     <motion.p 
                         initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, delay: 0.5 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
                         className="mt-6 text-lg text-gray-500 max-w-2xl mx-auto text-justify"
                     >
                         AME với quan điểm khách hàng là trọng tâm, nhằm đáp ứng nhu cầu ngày càng tăng của khách hàng, chúng tôi đã luôn nỗ lực hết mình để vươn tới sự hoàn thiện về chất lượng và dịch vụ để đạt được muc đích cung cấp:  
@@ -58,15 +65,16 @@ const ProfilePage: React.FC = () => {
                 <div className="container mx-auto  px-6 py-6 text-center text-4xl md:text-6xl font-extrabold"> 
                     <motion.h1
                         initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, delay: 0.5 }} 
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }} 
                         className="bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent">
                         Giới thiệu công ty
                     </motion.h1>
                 </div>
                 <motion.p 
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.5 }}
                     className="container text-lg text-gray-500 mt-6 max-w-5xl mx-auto text-justify"
                     >
@@ -105,8 +113,8 @@ const ProfilePage: React.FC = () => {
             {/* Các hoạt động */}
             <motion.div 
                 initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.5 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
                 className=" px-[40px] md:px-[120px] py-[30px] "
                 >
                 <div className="container mx-auto  px-6 py-6 text-center text-4xl md:text-6xl font-extrabold"> 
@@ -128,77 +136,35 @@ const ProfilePage: React.FC = () => {
             {/* Các công việc */}
             <div className="container mx-auto px-[60px] md:px-[150px] py-12 grid grid-cols-1 md:grid-cols-3 gap-[50px]  ">
             
-                {/* 1 */}
-                <div className="relative">
-                    <span className="absolute -left-10 top-0 text-7xl font-bold text-gray-600">1</span>
-                    <h3 className="text-xl font-bold text-gray-800 ">Công nghệ thông tin<br/> và truyền thông</h3>
-                    <p className="text-gray-600 mt-2 text-justify">
-                    Thiết kế nhiều các hệ thống mạng và phần mềm cho các dự án trọng điểm mang tính chất quốc gia 
-                    </p>
-                </div>
 
-                {/* 2 */}
-                <div className="relative">
-                    <span className="absolute -left-10 top-0 text-7xl font-bold text-gray-600">2</span>
-                    <h3 className="text-xl font-bold text-gray-800 ">Giải pháp Camera giám sát</h3>
-                    <p className="text-gray-600 mt-2 text-justify">
-                    Lắp đặt và quản trị sử dụng hệ thống Camera kĩ thuật số để giám sát giao thông; an ninh của công ty, chung cư, tòa nhà…
-                    </p>
-                </div>
+                {workData.map((work,id) => ( 
+                    <motion.div 
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="relative"
+                        key={id}
+                    >
+                        <span className="absolute -left-10 top-0 text-7xl font-bold text-gray-600">{work.id}</span>
+                        <h3 className="text-xl font-bold text-gray-800 ">{work.title}</h3>
+                        <p className="text-gray-600 mt-2 text-justify"> {work.content} </p>
+                    </motion.div>
 
-
-                {/* 3 */}
-                <div className="relative">
-                    <span className="absolute -left-10 top-0 text-7xl font-bold text-gray-600">3</span>
-                    <h3 className="text-xl font-bold text-gray-800 ml-1">Giải pháp <br/> bảo mật hệ thống <br/> </h3>
-                    <p className="text-gray-600 mt-2 ml-1 text-justify">
-                    cung cấp cho các giải pháp bảo mật tối ưu nhất với mọi yêu cầu của khách hàng.
-                    </p>
-                </div>
-
-                {/* 4 */}
-                <div className="relative">
-                    <span className="absolute -left-10 top-0 text-7xl font-bold text-gray-600">4</span>
-                    <h3 className="text-xl font-bold text-gray-800 ml-1">Giải pháp hệ thống <br/> máy chủ và lưu trữ</h3>
-                    <p className="text-gray-600 mt-2 ml-1 text-justify">
-                    tích hợp và xây dựng giải pháp lưu trữ tối ưu cho hệ thống thông tin của khách hàng, 
-                    cho phép khách hàng nâng cao khả năng quản lý, tăng hiệu năng truy xuất, đảm bảo tính ổn định, sẵn sàng và độ an toàn của dữ liệu.
-                    </p>
-                </div>
-
-
-
-                {/* 5 */}
-                <div className="relative">
-                    <span className="absolute -left-10 top-0 text-7xl font-bold text-gray-600">5</span>
-                    <h3 className="text-xl font-bold text-gray-800 ml-1">Hệ thống màn hình lớn</h3>
-                    <p className="text-gray-600 mt-2 ml-1 text-justify">
-                    Màn hình tấm lớn được ghép thành từ nhiều mô-đun bằng kỹ thuật ghép nối đặc biệt sẽ 
-                    trở thành một màn hình lớn duy nhất. Người sử dụng có thể hiển thị các nguồn tín hiệu video ở bất cứ vị trí nào trên màn hình
-                    </p>
-                </div>
-
-                {/* 6 */}
-                <div className="relative">
-                    <span className="absolute -left-10 top-0 text-7xl font-bold text-gray-600">6</span>
-                    <h3 className="text-xl font-bold text-gray-800 ml-1">Giải pháp hội nghị truyền hình <br/> </h3>
-                    <p className="text-gray-600 mt-2 ml-1 text-justify">
-                    Hội nghị truyền hình (Video conference) cho phép những người tham dự tại nhiều địa 
-                    điểm từ những quốc gia khác nhau có thể nhìn thấy và trao đổi trực tiếp với nhau 
-                    qua màn hình tivi như đang họp trong cùng một căn phòng. 
-                    </p>
-                </div>
-
-                
+                ))} 
             
             </div>
 
             {/* Đối tác toàn diện */}
-            <div className="container mx-auto  px-6 py-6 text-center text-4xl md:text-6xl font-extrabold"> 
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }} 
+                className="container mx-auto  px-6 py-6 text-center text-4xl md:text-6xl font-extrabold"
+                > 
                     <h1 className="bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent">
                     Đối tác toàn diện 
                     </h1>
-            </div>
+            </motion.div>
             <div className="container px-[120px] py-[20px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="container relative flex justify-center items-center   ">
                     <a href="http://bmdt.vn/" target="_blank" rel="noopener noreferrer" >
@@ -241,6 +207,42 @@ const ProfilePage: React.FC = () => {
         </>
     );
 };
+
+
+const workData = [
+    {
+        id:"1",
+        title: "Công nghệ thông tin và truyền thông",
+        content: "Thiết kế nhiều các hệ thống mạng và phần mềm cho các dự án trọng điểm mang tính chất quốc gia " ,
+    },
+    {
+        id:"2",
+        title: "Giải pháp Camera giám sát",
+        content: "Lắp đặt và quản trị sử dụng hệ thống Camera kĩ thuật số để giám sát giao thông; an ninh của công ty, chung cư, tòa nhà… " ,
+        
+    },
+    {
+        id:"3",
+        title: "Giải pháp bảo mật hệ thống ",
+        content: "cung cấp cho các giải pháp bảo mật tối ưu nhất với mọi yêu cầu của khách hàng. ",
+        
+    }, 
+    {
+        id:"4",
+        title: "Giải pháp hệ thống máy chủ và lưu trữ",
+        content: "tích hợp và xây dựng giải pháp lưu trữ tối ưu cho hệ thống thông tin của khách hàng, cho phép khách hàng nâng cao khả năng quản lý, tăng hiệu năng truy xuất, đảm bảo tính ổn định, sẵn sàng và độ an toàn của dữ liệu." ,
+    },
+    {
+        id:"5",
+        title: "Hệ thống màn hình lớn",
+        content: "Màn hình tấm lớn được ghép thành từ nhiều mô-đun bằng kỹ thuật ghép nối đặc biệt sẽ trở thành một màn hình lớn duy nhất. Người sử dụng có thể hiển thị các nguồn tín hiệu video ở bất cứ vị trí nào trên màn hình ",
+    },
+    {
+        id:"6",
+        title: "Giải pháp hội nghị truyền hình",
+        content: "Hội nghị truyền hình (Video conference) cho phép những người tham dự tại nhiều địa điểm từ những quốc gia khác nhau có thể nhìn thấy và trao đổi trực tiếp với nhau qua màn hình tivi như đang họp trong cùng một căn phòng. ",
+    },
+];
 
 export default ProfilePage;
 
