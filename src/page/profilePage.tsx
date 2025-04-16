@@ -19,7 +19,7 @@ const ProfilePage: React.FC = () => {
 
     return (
         <>
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-200">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
 
             {/* text đoạn đầu */}
             <div className="container px-[40px] md:px-[120px] py-[30px]  grid grid-cols-1 md:grid-cols-3  gap-x-4 ">
@@ -49,7 +49,7 @@ const ProfilePage: React.FC = () => {
                 </div>
 
                 {/* logo */}
-                <div className="container mx-auto mt-30 px-6 py-16 flex justify-items-center items-center ">
+                <div className="container mx-auto mt-30 px-6 py-16 flex justify-items-center items-center  ">
                     <motion.img
                         src={LOGO_AME}
                         alt="LOGO_AME"
@@ -61,13 +61,13 @@ const ProfilePage: React.FC = () => {
             </div>
 
             {/* Giới thiệu công ty */}
-            <div className="px-[40px] md:px-[120px]">
+            <div className="px-[40px] md:px-[120px]  ">
                 <div className="container mx-auto  px-6 py-6 text-center text-4xl md:text-6xl font-extrabold"> 
                     <motion.h1
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }} 
-                        className="bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent">
+                        className=" bg-gradient-to-r from-rose-700 to-amber-700 bg-clip-text text-transparent">
                         Giới thiệu công ty
                     </motion.h1>
                 </div>
@@ -118,7 +118,7 @@ const ProfilePage: React.FC = () => {
                 className=" px-[40px] md:px-[120px] py-[30px] "
                 >
                 <div className="container mx-auto  px-6 py-6 text-center text-4xl md:text-6xl font-extrabold"> 
-                    <h1 className="bg-gradient-to-r from-orange-500 to-purple-600  bg-clip-text   text-transparent">
+                    <h1 className=" bg-gradient-to-r from-rose-700 to-amber-700  bg-clip-text   text-transparent">
                     Các hoạt động chính của công ty 
                     </h1>
                 </div>
@@ -142,7 +142,7 @@ const ProfilePage: React.FC = () => {
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="relative"
+                        className="relative "
                         key={id}
                     >
                         <span className="absolute -left-10 top-0 text-7xl font-bold text-gray-600">{work.id}</span>

@@ -9,14 +9,14 @@ import { FaCalendarAlt, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 const ContactPage: React.FC = () => {
     return (
-        <>
-            <div className=" flex flex-col justify-center container mx-auto pt-[150px] ">
+        <div className="">
+            <div className=" flex flex-col justify-center container mx-auto pt-[150px] min-h-screen ">
                 <motion.h2 
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     className="text-4xl font-bold text-center"
-                >Liên Hệ</motion.h2>
+                >Liên hệ với chúng tôi</motion.h2>
                 
 
 
@@ -90,7 +90,7 @@ const ContactPage: React.FC = () => {
             </div>
 
        
-        </>
+        </div>
         
     );
 };

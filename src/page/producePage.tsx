@@ -58,29 +58,41 @@ const projects = [
 
 const ProducePage: React.FC = () => {
     return (
+
         <div className="flex flex-col items-center justify-center min-h-screen bg-white   mt-[70px]">
             
             <div className="container mt-[80px] text-black text-center   px-[40px] md:px-[120px] ">
                 <h2 className="text-4xl md:text-6xl font-bold"> 
-                    <span className="bg-gradient-to-r from-orange-500 to-purple-500 text-transparent bg-clip-text">
+                    <span className=" bg-gradient-to-r from-rose-700 to-amber-700 text-transparent bg-clip-text">
                         Một số sản phẩm web nổi bật
                     </span>
                 </h2>
             </div>
 
 
-            <div className="px-[40px] md:px-[150px] grid grid-cols-1 md:grid-cols-3  gap-10  mx-auto  mt-[100px] ">
+            <div className="container px-[40px] md:px-[150px] grid grid-cols-1 md:grid-cols-3  gap-10  mx-auto  mt-[100px] ">
                 {projects.map((project, index) => (
                 <div key={index} className="flex flex-col">
                     <motion.img
                         src={project.image}
                         alt={project.title}
                         className=" object-cover aspect-[4/3] shadow-md  "  //w-full h-[250px] object-cover
-                        whileHover={{ scale: 1.2 } }
-                        
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
+
+                        initial={{ y: 20 }}
+                        animate={{ y: 0 }}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+
+                            // whileHover={{ scale: 1.1 }} // Zoom nhẹ bên trong
+                            // transition={{ duration: 0.4, ease: "easeInOut" }}
+                            // initial={{ opacity: 0, y: 50 }}
+                            // whileInView={{ opacity: 1, y: 0 }}
+                            // viewport={{ once: true }}
+
+                        // whileHover={{ scale: 1.2 } }
+                        // initial={{ opacity: 0, y: 50 }}
+                        // whileInView={{ opacity: 1, y: 0 }}
+                        // transition={{ duration: 0.6 }}
                     />
                     <h3 className="text-xl font-bold mt-4">{project.title}</h3>
                     <div className="flex items-center text-[#91ff00ae] mt-2 mb-[50px]">
