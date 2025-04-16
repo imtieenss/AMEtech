@@ -28,7 +28,7 @@ const ServicePage: React.FC = () => {
                 loop
                 muted
                 playsInline
-                className="absolute inset-0 w-[110%] h-[95%] object-cover -z-10 scale-110 opacity-70  "
+                className="absolute inset-0 w-[110%] h-[95%] object-cover -z-10 scale-110 opacity-70 "
                 style={{ transform: "scaleX(-1)" }}
             >
                 <source src="videos/backdrop.mp4" type="video/mp4" />
@@ -87,15 +87,15 @@ const ServicePage: React.FC = () => {
 
                     <div className=" text-center  col-span-2  md:py-[100px]">
                         <motion.h2 
-                            className="text-4xl md:text-6xl  font-bold text-teal-500  "
+                            className="text-4xl md:text-6xl  font-bold text-teal-600  "
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                         >
-                                Cung cấp <br />
-                                <span className=" bg-gradient-to-r from-rose-500 to-amber-600  text-transparent bg-clip-text">
-                                Dịch vụ chuyển đổi số 
-                                </span>
+                                Cung cấp
+                                
+                                dịch vụ chuyển đổi số 
+                                
                         </motion.h2>
 
 
@@ -154,7 +154,7 @@ const ServicePage: React.FC = () => {
                         transition={{ duration: 0.6 }} 
                         className="text-5xl md:text-6xl font-bold"
                     >
-                        <span className="bg-gradient-to-r from-orange-500 to-purple-500 text-transparent bg-clip-text">
+                        <span className="bg-teal-600  text-transparent bg-clip-text">
                         Hệ thống máy chủ và lưu trữ
                         </span>
                     </motion.h2>
@@ -198,7 +198,7 @@ const ServicePage: React.FC = () => {
             className="container mt-[80px] text-black text-center   px-[40px] md:px-[120px] pb-[70px] "
         >
             <h2 className="text-4xl md:text-6xl font-bold"> 
-                <span className="bg-gradient-to-r from-orange-500 to-purple-500 text-transparent bg-clip-text">
+                <span className="bg-teal-600  text-transparent bg-clip-text">
                     Camera giám sát
                 </span>
             </h2>
@@ -232,7 +232,7 @@ const ServicePage: React.FC = () => {
                         transition={{ duration: 0.6 }}
                         className="text-5xl md:text-6xl font-bold"
                     >
-                        <span className="bg-gradient-to-r from-orange-500 to-purple-500 text-transparent bg-clip-text">
+                        <span className="bg-teal-600  text-transparent bg-clip-text">
                         Màn hình hiển thị tấm lớn
                         </span>
                     </motion.h2>
@@ -271,7 +271,7 @@ const ServicePage: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 className="text-4xl md:text-6xl font-bold"
             > 
-                <span className="bg-gradient-to-r from-red-800 to-orange-400 text-transparent bg-clip-text">
+                <span className="bg-teal-600  text-transparent bg-clip-text">
                 Hội nghị truyền hình
                 </span>
             </motion.h2>

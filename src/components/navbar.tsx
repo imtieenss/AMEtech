@@ -29,7 +29,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className="w-full fixed top-0 left-0 z-50 bg-emerald-700    md:backdrop-blur-lg shadow-md  ">   {/*    teal-500  emerald-700 */}
+        <nav className="w-full fixed top-0 left-0 z-50 bg-blue-100    md:backdrop-blur-lg shadow-md  ">   {/*    teal-500  emerald-700 */}
             <div className="container mx-auto flex items-center justify-between md:justify-center relative gap-x-[100px] p-3  "
 
             >
@@ -60,7 +60,7 @@ const Navbar = () => {
                                 `}
                 >
                     {MENU_LINKS.map((item) => (
-                        <li key={item.id} className="p-2 hover:bg-rose-200 hover:text-white rounded-md transition-all cursor-pointer text-white "   >
+                        <li key={item.id} className="p-2  hover:text-white rounded-md transition-all cursor-pointer text-white "   >
                             <Link
                                 to={item.to}
                                 onClick={() => {
@@ -69,8 +69,8 @@ const Navbar = () => {
                                 }}
                                 className={`menu-item text-[18px] font-bold transition cursor-pointer tracking-wide md:tracking-wider
                                     ${location.pathname === item.to
-                                    ? "text-transparent bg-clip-text bg-fuchsia-500"
-                                    : "text-white hover:text-gray-900"
+                                    ? "text-transparent bg-clip-text bg-red-700"
+                                    : "text-green-700 hover:text-gray-900"
                                 }`}
 
                                 

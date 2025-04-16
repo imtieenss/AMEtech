@@ -61,13 +61,13 @@ const ProfilePage: React.FC = () => {
             </div>
 
             {/* Giới thiệu công ty */}
-            <div className="px-[40px] md:px-[120px]  ">
+            <div className="px-[40px] md:px-[120px] pt-[90px] ">
                 <div className="container mx-auto  px-6 py-6 text-center text-4xl md:text-6xl font-extrabold"> 
                     <motion.h1
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }} 
-                        className=" bg-gradient-to-r from-rose-700 to-amber-700 bg-clip-text text-transparent">
+                        className=" bg-teal-600  bg-clip-text text-transparent">
                         Giới thiệu công ty
                     </motion.h1>
                 </div>
@@ -118,7 +118,7 @@ const ProfilePage: React.FC = () => {
                 className=" px-[40px] md:px-[120px] py-[30px] "
                 >
                 <div className="container mx-auto  px-6 py-6 text-center text-4xl md:text-6xl font-extrabold"> 
-                    <h1 className=" bg-gradient-to-r from-rose-700 to-amber-700  bg-clip-text   text-transparent">
+                    <h1 className=" bg-teal-600   bg-clip-text   text-transparent">
                     Các hoạt động chính của công ty 
                     </h1>
                 </div>
@@ -161,7 +161,7 @@ const ProfilePage: React.FC = () => {
                 transition={{ duration: 0.6 }} 
                 className="container mx-auto  px-6 py-6 text-center text-4xl md:text-6xl font-extrabold"
                 > 
-                    <h1 className="bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent">
+                    <h1 className="bg-teal-600  bg-clip-text text-transparent">
                     Đối tác toàn diện 
                     </h1>
             </motion.div>

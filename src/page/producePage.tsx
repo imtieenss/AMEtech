@@ -63,7 +63,7 @@ const ProducePage: React.FC = () => {
             
             <div className="container mt-[80px] text-black text-center   px-[40px] md:px-[120px] ">
                 <h2 className="text-4xl md:text-6xl font-bold"> 
-                    <span className=" bg-gradient-to-r from-rose-700 to-amber-700 text-transparent bg-clip-text">
+                    <span className=" bg-teal-600  text-transparent bg-clip-text">
                         Một số sản phẩm web nổi bật
                     </span>
                 </h2>
