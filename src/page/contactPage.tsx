@@ -2,8 +2,8 @@
 
 
 import { motion } from "framer-motion";
-import { FaCalendarAlt, FaMapMarkerAlt, FaPhoneAlt, } from "react-icons/fa";
-import { MdOutlineAttachEmail,MdAttachEmail } from "react-icons/md"; 
+import { FaCalendarAlt, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { MdAttachEmail } from "react-icons/md"; 
 
 const ContactPage: React.FC = () => {
     return (
