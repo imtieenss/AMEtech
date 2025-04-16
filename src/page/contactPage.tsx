@@ -1,11 +1,9 @@
 
 
 
-// import LOGO from "../assets/images/logo.png"
-// import ZALO from "../assets/images/zalosvg.svg"
-// import { FaPhone,} from "react-icons/fa"
 import { motion } from "framer-motion";
-import { FaCalendarAlt, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { FaCalendarAlt, FaMapMarkerAlt, FaPhoneAlt, } from "react-icons/fa";
+import { MdOutlineAttachEmail,MdAttachEmail } from "react-icons/md"; 
 
 const ContactPage: React.FC = () => {
     return (
@@ -20,17 +18,18 @@ const ContactPage: React.FC = () => {
                 
 
 
-                <div className="px-[40px] md:px-[100px] py-10 grid md:grid-cols-2 gap-10 items-center">
+                <div className="px-[40px] md:px-[100px] py-10 grid md:grid-cols-2 gap-10 items-center text-xl">
                 {/* Left Content */}
                 <div className="py-[40px]">
                     <motion.h2 
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="text-2xl md:text-3xl font-bold mb-6"
+                        className="text-5xl md:text-3xl font-bold mb-6"
                     >AME.TECH LOCATION
                     </motion.h2>
 
+                    {/* lịch làm việc */}
                     <motion.div 
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -44,6 +43,7 @@ const ContactPage: React.FC = () => {
                         </div>
                     </motion.div>
 
+                    {/* Địa chỉ */}
                     <motion.div 
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -52,11 +52,12 @@ const ContactPage: React.FC = () => {
                     >
                         <FaMapMarkerAlt className="text-xl mt-1 mr-3" />
                         <div>
-                            <p> Số 8 Khu N4 DA nhà ở Xuân Đỉnh, Ngõ 40, Đường Xuân La,<br/> Phường Xuân Tảo, Quận Bắc Từ Liêm, Hà Nội</p>
+                            <p> Số 8 Khu N4 DA nhà ở Xuân Đỉnh, Ngõ 40, Đường Xuân La, Phường Xuân Tảo, Quận Bắc Từ Liêm, Hà Nội</p>
                             <p className="text-sm text-gray-600">Address</p>
                         </div>
                     </motion.div>
 
+                    {/* phone */}
                     <motion.div 
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -67,6 +68,20 @@ const ContactPage: React.FC = () => {
                     <div>
                         <p>0976618962</p>
                         <p className="text-sm text-gray-600">Phone Number</p>
+                    </div>
+                    </motion.div>
+
+                    {/* email */}
+                    <motion.div 
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="flex items-center mb-3"
+                    >
+                    <MdAttachEmail className="text-2xl mr-3" />
+                    <div>
+                        <p>Amecompany08@gmail.com</p>
+                        <p className="text-sm text-gray-600">Email</p>
                     </div>
                     </motion.div>
                 </div>

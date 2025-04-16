@@ -13,7 +13,7 @@ const Icons = () => {
             </div>
 
             <div className="  fixed right-3 bottom-25 flex flex-col space-y-3 z-50">
-                <a href="https://zalo.me" target="_blank" className="p-2 bg-white rounded-full shadow-lg hover:opacity-80 transition">
+                <a href="https://zalo.me/0976618962" target="_blank" className="p-2 bg-white rounded-full shadow-lg hover:opacity-80 transition">
                     <img src= {ZALO} alt="Zalo" className="w-9 h-9" />
                 </a>
             </div>

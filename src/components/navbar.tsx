@@ -56,7 +56,7 @@ const Navbar = () => {
                                 w-full md:w-auto  
                                 p-5 md:p-0 rounded-lg md:rounded-none
                                 transition-all duration-300 
-                                ${isOpen ? " bg-emerald-700 md:backdrop-blur-none md:bg-transparent md:border-0" : "hidden md:flex"}
+                                ${isOpen ? " bg-blue-100 md:backdrop-blur-none md:bg-transparent md:border-0" : "hidden md:flex"}
                                 `}
                 >
                     {MENU_LINKS.map((item) => (
@@ -69,7 +69,7 @@ const Navbar = () => {
                                 }}
                                 className={`menu-item text-[18px] font-bold transition cursor-pointer tracking-wide md:tracking-wider
                                     ${location.pathname === item.to
-                                    ? "text-transparent bg-clip-text bg-red-700"
+                                    ? "text-transparent bg-clip-text bg-red-700 "
                                     : "text-green-700 hover:text-gray-900"
                                 }`}
 

@@ -33,33 +33,38 @@ const ServicePage: React.FC = () => {
             >
                 <source src="videos/backdrop.mp4" type="video/mp4" />
             </video>
-            
-            {/* luôn đồng hành cùng khách hàng */}
-            <div className="container px-[40px] md:px-[160px] mx-auto  pt-[270px]    "  > {/* px-[40px] md:px-[170px] text-center  md:text-left */}
-                <motion.h1 
-                    className="text-2xl md:text-5xl  font-bold leading-tight "
-                    
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                >                                                     {/* text-left */}                                                                           
-                <span className="bg-gradient-to-r from-green-600 via-red-900 to-orange-600 text-transparent bg-clip-text">
-                    Chúng tôi luôn đồng hành cùng  khách<br/> hàng 
-                    tạo ra những sản phẩm tốt nhất
-                </span>
-                </motion.h1>
+            <div className="  min-h-screen flex flex-col item-center justify-center  ">
+                {/* luôn đồng hành cùng khách hàng */}
+                <div className="container px-[40px] md:px-[160px] mx-auto      "  > {/* px-[40px] md:px-[170px] text-center  md:text-left */}
+                    <motion.h1 
+                        className="text-2xl md:text-5xl  font-bold leading-tight "
+                        
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >                                                     {/* text-left */}                                                                           
+                    <span className="bg-gradient-to-r from-green-600 via-red-900 to-orange-600 text-transparent bg-clip-text">
+                        Chúng tôi luôn đồng hành cùng  khách<br/> hàng 
+                        tạo ra những sản phẩm tốt nhất
+                    </span>
+                    </motion.h1>
 
-                <motion.p 
-                    className="mt-6 text-xl md:text-2xl md:w-9/10  "  
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                >                                                                                            {/* md:w-3/4 font-normal text-justify  */}
-                    Đáp ứng nhu cầu đa dạng của Khách hàng, AME tập trung vào nghiên cứu và phát triển công nghệ, triển khai các dự án cung cấp trang thiết bị 
-                    và phần mềm với độ bảo mật cao các cơ quan quan trọng của Đảng và Nhà nước như: Cục Tác chiến Bộ Quốc Phòng, Cục Kế hoạch Đầu tư, 
-                    Binh chủng Đặc công, Tổng cục chính trị, Thư viện Quân đội… Khai thác, viết và triển khai các phần mềm dịch vụ.
-                </motion.p>
+                    <motion.p 
+                        className="mt-6 text-xl md:text-2xl md:w-9/10  "  
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >                                                                                            {/* md:w-3/4 font-normal text-justify  */}
+                        Đáp ứng nhu cầu đa dạng của Khách hàng, AME tập trung vào nghiên cứu và phát triển công nghệ, triển khai các dự án cung cấp trang thiết bị 
+                        và phần mềm với độ bảo mật cao các cơ quan quan trọng của Đảng và Nhà nước như: Cục Tác chiến Bộ Quốc Phòng, Cục Kế hoạch Đầu tư, 
+                        Binh chủng Đặc công, Tổng cục chính trị, Thư viện Quân đội… Khai thác, viết và triển khai các phần mềm dịch vụ.
+                    </motion.p>
+                </div>
+
+
             </div>
+            
+            
 
         </div>
 
@@ -128,8 +133,8 @@ const ServicePage: React.FC = () => {
 
         {/* 6 kĩ năng */}
         <motion.div 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             className="container grid grid-cols-1 md:grid-cols-3 gap-6 text-center mx-auto px-[120px] my-[150px] " >
             {softData.map((soft,id) => (

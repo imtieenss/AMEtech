@@ -19,12 +19,15 @@ const ProfilePage: React.FC = () => {
 
     return (
         <>
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-200">
 
             {/* text đoạn đầu */}
-            <div className="container px-[40px] md:px-[120px] py-[30px]  grid grid-cols-1 md:grid-cols-3  gap-x-4 ">
+            <div className="container px-[40px] md:px-[120px] py-[30px]  grid grid-cols-1 md:grid-cols-3  gap-x-4    min-h-screen  ">
                 {/* text */}
-                <div className=" md:col-span-2 mx-auto mt-30 px-6 py-16 text-center "> 
+                
+                <div className=" md:col-span-2 mx-auto mt-30 px-6 py-16 text-center  flex justify-items-center items-center ">
+
+                    <div className="   ">
                     <motion.h1           
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -46,6 +49,10 @@ const ProfilePage: React.FC = () => {
                         AME đã xây dựng được chiến lược kinh doanh đúng đắn với phương châm:
                         <span className="italic font-bold"> “TẠO NÊN GIÁ TRỊ TỪ SỰ ĐỔI MỚI, VƯƠN TỚI SỰ HOÀN THIỆN VỀ CHẤT LƯỢNG VÀ DỊCH VỤ”.</span>
                     </motion.p>
+                        
+                    
+                    </div> 
+                   
                 </div>
 
                 {/* logo */}

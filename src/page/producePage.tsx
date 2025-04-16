@@ -9,49 +9,29 @@ import QLTT from "../assets/images/Produce/Quản_lý_tư_tưởng.jpg"
 
 import { motion } from "framer-motion";
 
-
+// tỉ lệ ảnh là 4:3
 
 const projects = [
     {
       title: "Phần mềm hỗ trợ quản lý và kê khai chi phí khám chữa bệnh BHYT",
-      date: "14/04/2023",
+      date: "01/10/2024",
       image: BHXH, 
     },
     {
       title: "Phần mềm phục vụ công tác chỉ huy điều hành tại Binh Chủng Đăc Công",
-      date: "19/08/2021",
+      date: "25/10/2024",
       image: BCDC,
     },
     {
       title: "Phần mềm quản lý CSDL thi hành án dân sự trong Quân đội",
-      date: "19/08/2021",
+      date: "08/12/2024",
       image: THADS,
     },
     {
         title: "Phần mềm quản lý tư tưởng Bộ Đội",
-        date: "19/08/2021",
+        date: "19/02/2025",
         image: QLTT,
     },
-    {
-        title: "Phần mềm hỗ trợ quản lý và kê khai chi phí khám chữa bệnh BHYT",
-        date: "14/04/2023",
-        image: BHXH, 
-      },
-      {
-        title: "Phần mềm phục vụ công tác chỉ huy điều hành tại Binh Chủng Đăc Công",
-        date: "19/08/2021",
-        image: BCDC,
-      },
-      {
-        title: "Phần mềm quản lý CSDL thi hành án dân sự trong Quân đội",
-        date: "19/08/2021",
-        image: THADS,
-      },
-      {
-          title: "Phần mềm quản lý tư tưởng Bộ Đội",
-          date: "19/08/2021",
-          image: QLTT,
-      },
   ];
 
 
@@ -59,14 +39,18 @@ const projects = [
 const ProducePage: React.FC = () => {
     return (
 
-        <div className="flex flex-col items-center justify-center min-h-screen bg-white   mt-[70px]">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-white   mt-[120px]">
             
             <div className="container mt-[80px] text-black text-center   px-[40px] md:px-[120px] ">
-                <h2 className="text-4xl md:text-6xl font-bold"> 
+                <motion.h2 
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-4xl md:text-6xl font-bold"> 
                     <span className=" bg-teal-600  text-transparent bg-clip-text">
                         Một số sản phẩm web nổi bật
                     </span>
-                </h2>
+                </motion.h2>
             </div>
 
 
@@ -78,21 +62,15 @@ const ProducePage: React.FC = () => {
                         alt={project.title}
                         className=" object-cover aspect-[4/3] shadow-md  "  //w-full h-[250px] object-cover
 
-                        initial={{ y: 20 }}
-                        animate={{ y: 0 }}
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
+                        // initial={{ y: 20 }}
+                        // animate={{ y: 0 }}
+                        // whileHover={{ scale: 1.1 }}
+                        // whileTap={{ scale: 0.9 }}
 
-                            // whileHover={{ scale: 1.1 }} // Zoom nhẹ bên trong
-                            // transition={{ duration: 0.4, ease: "easeInOut" }}
-                            // initial={{ opacity: 0, y: 50 }}
-                            // whileInView={{ opacity: 1, y: 0 }}
-                            // viewport={{ once: true }}
-
-                        // whileHover={{ scale: 1.2 } }
-                        // initial={{ opacity: 0, y: 50 }}
-                        // whileInView={{ opacity: 1, y: 0 }}
-                        // transition={{ duration: 0.6 }}
+                        whileHover={{ scale: 1.1 } }
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
                     />
                     <h3 className="text-xl font-bold mt-4">{project.title}</h3>
                     <div className="flex items-center text-[#91ff00ae] mt-2 mb-[50px]">
