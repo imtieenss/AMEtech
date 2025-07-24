@@ -37,7 +37,7 @@ const Navbar = () => {
         <Link to="/" onClick={() => navigate("/")}>
           <motion.img
             whileHover={{ scale: 1.1 }}
-            className=" min-h-[60px] h-[60px] relative cursor-pointer object-contain shrink-0 "
+            className=" ml-[10px] md:ml-0  min-h-[60px] h-[60px] relative cursor-pointer object-contain shrink-0 "
             src={LOGO}
             alt="Logo"
           />
@@ -46,17 +46,17 @@ const Navbar = () => {
         {/* NAVIGATION LINKS */}
         <ul
           className={`  flex flex-col md:flex-row  text-center
-                         md:gap-x-[clamp(0px,5vw,38px)]   
+                        md:gap-x-[clamp(0px,5vw,38px)]   
                         absolute md:static top-[100%] left-0 
                         w-full md:w-auto  
                         p-[5px] md:p-0 rounded-lg md:rounded-none
-                                transition-all duration-300 
-                                ${
-                                  isOpen
-                                    ? " bg-blue-100 md:backdrop-blur-none md:bg-transparent md:border-0"
-                                    : "hidden md:flex"
-                                }
-                                `} //
+                        transition-all duration-300 
+                        ${
+                            isOpen
+                            ? " bg-white md:backdrop-blur-none md:bg-transparent md:border-0"
+                            : "hidden md:flex"
+                        }
+                    `} //
         >
           {MENU_LINKS.map((item) => (
             <li
@@ -69,10 +69,10 @@ const Navbar = () => {
                   setIsOpen(false);
                   navigate(item.to);
                 }}
-                className={`menu-item text-[18px] font-bold transition cursor-pointer tracking-wide md:tracking-wider
+                className={`menu-item text-[18px] font-bold transition-colors duration-300 cursor-pointer tracking-wide md:tracking-wider
                                     ${
                                       location.pathname === item.to
-                                        ? "text-transparent bg-clip-text bg-red-700 "
+                                        ? "text-red-700 "
                                         : "text-green-700 hover:text-gray-900"
                                     }`}
               >
@@ -92,16 +92,16 @@ const Navbar = () => {
         </button> */}
 
         <div className=" hidden md:block">
-          <div className="flex items-center gap-2 text-blue-900 text-sm  ">
+          <div className="flex items-center gap-2 text-amber-600 text-sm  ">
             {/* Icon tìm kiếm */}
             <FiSearch className="text-xl" />
 
             {/* Đường gạch dọc */}
-            <div className="w-px h-6 bg-blue-900 mx-1" />
+            <div className="w-px h-6 bg-green-700 mx-1" />
 
             {/* hotline*/}
             <div className="flex items-center ">
-              <FaPhoneAlt className="text-lg mr-3" />
+              <FaPhoneAlt className="text-lg mr-[8px]" />
               <div className=" text-lg">
                 <p>0976618962</p>
               </div>
@@ -111,7 +111,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="block md:hidden text-[#333] focus:outline-none pl-5" // md:hidden
+          className="block md:hidden text-[#333] focus:outline-none mr-[15px]" // md:hidden
           onClick={toggleMenu}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
