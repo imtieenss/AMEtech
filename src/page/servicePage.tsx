@@ -110,7 +110,7 @@ const ServicePage: React.FC = () => {
                             transition={{ duration: 0.6 }}  
                             className=" flex flex-col justify-center items-center   "
                         >
-                            <p className=" mt-4  text-xl text-gray-800 text-justify ">
+                            <p className=" mt-4  text-xl text-gray-800 text-justify px-[0px] md:px-[15px] ">
                             Công ty AME là đơn vị tiên phong trong lĩnh vực chuyển đổi số, sở hữu đội ngũ chuyên gia giàu kinh nghiệm 
                             và công nghệ tiên tiến. Với năng lực triển khai các giải pháp số hóa toàn diện, công ty đã khẳng định vị 
                             thế qua nhiều dự án. Chúng tôi cam kết cung cấp các hệ thống thông minh, an toàn và tối ưu, đáp ứng đầy 

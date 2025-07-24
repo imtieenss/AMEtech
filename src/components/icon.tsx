@@ -7,7 +7,7 @@ const Icons = () => {
         <div>
             
             <div className="  fixed right-3 bottom-10 flex flex-col space-y-3 z-50">
-                <a href="tel:0976618962" className="bg-green-500 p-3 rounded-full text-white shadow-lg hover:bg-green-600 transition">
+                <a href="tel:0826611611" className="bg-green-500 p-3 rounded-full text-white shadow-lg hover:bg-green-600 transition">
                     <FaPhone size={24} />
                 </a>
             </div>

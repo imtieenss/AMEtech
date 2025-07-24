@@ -19,7 +19,7 @@ const ProfilePage: React.FC = () => {
 
     return (
         <>
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-200">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-w">
 
             {/* text đoạn đầu */}
             <div className="container px-[40px] md:px-[120px] py-[30px]  grid grid-cols-1 md:grid-cols-3  gap-x-4    min-h-screen  ">
@@ -34,7 +34,7 @@ const ProfilePage: React.FC = () => {
                     transition={{ duration: 0.6 }}
                     className="text-4xl md:text-4xl font-extrabold text-left"
                     >
-                        <span className="bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-red-700 to-yellow-600 bg-clip-text text-transparent">
                         Chúng tôi một doanh nghiệp trẻ<br/> với phương châm kinh doanh
                         </span>
                     </motion.h1>
@@ -153,8 +153,8 @@ const ProfilePage: React.FC = () => {
                         key={id}
                     >
                         <span className="absolute -left-10 top-0 text-7xl font-bold text-gray-600">{work.id}</span>
-                        <h3 className="text-xl font-bold text-gray-800 ">{work.title}</h3>
-                        <p className="text-gray-600 mt-2 text-justify"> {work.content} </p>
+                        <h3 className="text-xl font-bold text-gray-800 pl-[7px] ">{work.title}</h3>
+                        <p className="text-gray-600 mt-2 text-justify pl-[7px] "> {work.content} </p>
                     </motion.div>
 
                 ))} 
