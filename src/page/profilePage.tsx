@@ -3,26 +3,16 @@ import LOGO_BINH_MINH from "../assets/images/logoProfile/logoBinhMinh.png";
 import LOGO_AME from "../assets/images/logoProfile/logoAME.png";
 import LOGO_TECA from "../assets/images/logoProfile/Logo_teca.png";
 import { motion } from "framer-motion";
-// import { useState, useEffect } from "react";
-// import ReactMarkdown from 'react-markdown';
+
 
 const ProfilePage: React.FC = () => {
-    // //Giới thiệu cty 
-    // const [text1, setText1] = useState('');
-    // useEffect(() => {
-    //     // Fetch or import the .md file
-    //     fetch('/src/assets/text/gioi-thieu-cty.md')
-    //     .then(response => response.text())
-    //     .then(text => setText1(text))
-    //     .catch(error => console.error('Error loading markdown:', error));
-    // }, []);
-
+  
     return (
         <>
-        <div className="flex flex-col items-center justify-center min-h-screen bg-w">
+        <div className="flex flex-col items-center justify-center min-h-screen ">
 
             {/* text đoạn đầu */}
-            <div className="container px-[40px] md:px-[120px] py-[30px]  grid grid-cols-1 md:grid-cols-3  gap-x-4    min-h-screen  ">
+            <div className="container  px-[40px] md:px-[120px] py-[30px]  grid grid-cols-1 md:grid-cols-3  gap-x-4    min-h-screen  ">
                 {/* text */}
                 
                 <div className=" md:col-span-2 mx-auto mt-30 px-6 py-16 text-center  flex justify-items-center items-center ">
@@ -178,7 +168,7 @@ const ProfilePage: React.FC = () => {
                         <motion.img
                         animate={{ y: [0, -10, 0] }}
                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                        src={LOGO_SMART} // Thay bằng ảnh thực tế của bạn
+                        src={LOGO_SMART} 
                          alt="LOGO_SMART"
                         className=" flex justify_center rounded-4xl w-[150px] "
                         />
@@ -190,7 +180,7 @@ const ProfilePage: React.FC = () => {
                         <motion.img
                         animate={{ y: [0, -10, 0] }}
                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                        src={LOGO_TECA} // Thay bằng ảnh thực tế của bạn
+                        src={LOGO_TECA} 
                          alt="LOGO_TECA"
                         className=" flex justify_center rounded-4xl w-[150px] "
                         />
@@ -202,7 +192,7 @@ const ProfilePage: React.FC = () => {
                         <motion.img
                         animate={{ y: [0, -10, 0] }}
                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                        src={LOGO_BINH_MINH} // Thay bằng ảnh thực tế của bạn
+                        src={LOGO_BINH_MINH} 
                          alt="LOGO_BINH_MINH"
                         className=" flex justify_center rounded-4xl w-[200px] "
                         />
@@ -252,6 +242,125 @@ const workData = [
 ];
 
 export default ProfilePage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//==============================================================================
+// import { FaCalendarAlt, } from "react-icons/fa";
+// import BHXH from "../assets/images/Produce/BHXH.png"
+// import BCDC from "../assets/images/Produce/Binh_chủng_đặc_công.jpg"
+// import THADS from "../assets/images/Produce/Thi_hành_án_DS.jpg"
+// import QLTT from "../assets/images/Produce/Quản_lý_tư_tưởng.jpg"
+
+// import { motion } from "framer-motion";
+
+// // tỉ lệ ảnh là 4:3
+
+// const projects = [
+//     {
+//       title: "Phần mềm hỗ trợ quản lý và kê khai chi phí khám chữa bệnh BHYT",
+//       date: "01/10/2024",
+//       image: BHXH, 
+//     },
+//     {
+//       title: "Phần mềm phục vụ công tác chỉ huy điều hành tại Binh Chủng Đăc Công",
+//       date: "25/10/2024",
+//       image: BCDC,
+//     },
+//     {
+//       title: "Phần mềm quản lý CSDL thi hành án dân sự trong Quân đội",
+//       date: "08/12/2024",
+//       image: THADS,
+//     },
+//     {
+//         title: "Phần mềm quản lý tư tưởng Bộ Đội",
+//         date: "19/02/2025",
+//         image: QLTT,
+//     },
+//   ];
+
+
+
+// const ProducePage: React.FC = () => {
+//     return (
+
+//         <div className="flex flex-col items-center justify-center min-h-screen bg-white   mt-[120px]">
+            
+//             <div className="container mt-[80px] text-black text-center   px-[40px] md:px-[120px] ">
+//                 <motion.h2 
+//                     initial={{ opacity: 0, y: 50 }}
+//                     whileInView={{ opacity: 1, y: 0 }}
+//                     transition={{ duration: 0.6 }}
+//                     className="text-4xl md:text-6xl font-bold"> 
+//                     <span className=" bg-teal-600  text-transparent bg-clip-text">
+//                         Một số sản phẩm web nổi bật
+//                     </span>
+//                 </motion.h2>
+//             </div>
+
+//             <div className="container px-[40px] md:px-[150px] grid grid-cols-1 md:grid-cols-3  gap-10  mx-auto  mt-[100px] ">
+//                 {projects.map((project, index) => (
+//                 <div key={index} className="flex flex-col">
+//                     <motion.img
+//                         src={project.image}
+//                         alt={project.title}
+//                         className=" object-cover aspect-[4/3] shadow-md  "  //w-full h-[250px] object-cover
+//                         whileHover={{ scale: 1.1 } }
+//                         initial={{ opacity: 0, y: 50 }}
+//                         whileInView={{ opacity: 1, y: 0 }}
+//                         transition={{ duration: 0.6 }}
+//                     />
+//                     <h3 className="text-xl font-bold mt-4">{project.title}</h3>
+//                     <div className="flex items-center text-[#91ff00ae] mt-2 mb-[50px]">
+//                         <FaCalendarAlt className="mr-2 text-black" />
+//                         <span className="text-black  ">{project.date}</span>
+//                     </div>
+                    
+//                 </div>
+//                 ))}
+//             </div>
+
+//         </div>
+//     );
+// };
+
+// export default ProducePage;
+
 
 
 

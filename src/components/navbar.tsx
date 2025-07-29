@@ -31,8 +31,9 @@ const Navbar = () => {
 
   return (
     // {/*    teal-500  emerald-700 */}
-    <nav className="w-full fixed top-0 left-0 z-50 bg-white    md:backdrop-blur-lg shadow-md  ">
-      <div className="container mx-auto flex items-center justify-between md:justify-center relative gap-x-[40px] m-[4px] font-sans ">
+    <nav className="w-full fixed top-0 left-0 z-50 bg-red-50    md:backdrop-blur-lg shadow-md  ">
+      <div className="container mx-auto flex items-center justify-between md:justify-center relative  m-[4px] font-sans  gap-x-[clamp(0px,5vw,100px)] ">     {/* gap-x-[40px] */}
+        
         {/* LOGO - Điều hướng về trang chủ */}
         <Link to="/" onClick={() => navigate("/")}>
           <motion.img
@@ -46,7 +47,7 @@ const Navbar = () => {
         {/* NAVIGATION LINKS */}
         <ul
           className={`  flex flex-col md:flex-row  text-center
-                        md:gap-x-[clamp(0px,5vw,38px)]   
+                        md:gap-x-[clamp(0px,5vw,70px)]   
                         absolute md:static top-[100%] left-0 
                         w-full md:w-auto  
                         p-[5px] md:p-0 rounded-lg md:rounded-none
