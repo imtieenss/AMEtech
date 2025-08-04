@@ -201,7 +201,7 @@ const HomePage: React.FC = () => {
             className="max-w-[88%] bg-amber-200  "
           >
             {serviceData.map((item, id) => (
-              <SwiperSlide key={id} className=" flex justify-items-center bg-amber-600">
+              <SwiperSlide key={id} className=" grid justify-items-center bg-amber-600"> //justify-items-center
                 <div
                   key={id}
                   className="relative  w-70 h-100 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300  bg-red-300 " //relative group w-64 h-96 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300
