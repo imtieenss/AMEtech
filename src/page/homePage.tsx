@@ -198,13 +198,13 @@ const HomePage: React.FC = () => {
             navigation
             autoplay={{ delay: 3000 }}
             loop
-            className="max-w-[88%] bg-amber-200  "
+            className="max-w-[88%]  "
           >
             {serviceData.map((item, id) => (
-              <SwiperSlide key={id} className=" grid justify-items-center bg-amber-600"> //justify-items-center
+              <SwiperSlide key={id} className="  "> //justify-items-center
                 <div
                   key={id}
-                  className="relative  w-70 h-100 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300  bg-red-300 " //relative group w-64 h-96 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300
+                  className="relative  w-70 h-100 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300  bg-red-300  mx-auto " //relative group w-64 h-96 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300
                   style={{ backgroundImage: `url(${item.image})` }}
                 >
                   {/* Tiêu đề luôn hiện */}
