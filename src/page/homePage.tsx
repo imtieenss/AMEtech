@@ -8,13 +8,12 @@ import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import {
   Landmark,
   Globe,
-  BookOpen,
   Banknote,
   HandCoins,
   BarChart3,
   Cctv,
   Cog,
-  Cpu,
+  
 } from "lucide-react";
 
 // img logo

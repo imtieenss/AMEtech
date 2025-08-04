@@ -7,7 +7,7 @@ import { MENU_LINKS } from "../utils/data";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
-import { FiSearch } from "react-icons/fi";
+//import { FiSearch } from "react-icons/fi";
 
 import { UserRound, } from "lucide-react";
 
