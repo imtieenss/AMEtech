@@ -4,16 +4,37 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import TestimonialSection from "./sections/TestimonialSection";
 import { useEffect, useState } from "react";
+import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import {
+  Landmark,
+  Globe,
+  BookOpen,
+  Banknote,
+  HandCoins,
+  BarChart3,
+} from "lucide-react";
 
 // img logo
 const images = import.meta.glob("../assets/images/logoHome/logo/logo*.png", {
   eager: true,
 });
 const logos = Object.values(images).map((mod: any) => mod.default);
-// img
+// img intro
 import AMEINTRO from "../assets/images/logoHome/intro/wifi-(1).jpg";
 import CLOUD from "../assets/images/logoHome/intro/cloud.jpg";
-import SECURITY from "../assets/images/logoHome/intro/security.jpg";
+import SECURITY from "../assets/images/logoHome/intro/baomat.jpg";
+import YSINH from "../assets/images/logoHome/intro/baomat.jpg";
+import NETWORK from "../assets/images/logoHome/intro/baomat.jpg";
+import AIIOT from "../assets/images/logoHome/intro/baomat.jpg";
+
+//img 
+import IT from "../assets/images/logoHome/intro/wifi-(1).jpg";
+import CAM from "../assets/images/logoHome/intro/cloud.jpg";
+import BAOMAT from "../assets/images/logoHome/intro/baomat.jpg";
+import MANHINHLON from "../assets/images/logoHome/intro/baomat.jpg";
+import MAYCHU from "../assets/images/logoHome/intro/baomat.jpg";
+import HOINGHI from "../assets/images/logoHome/intro/baomat.jpg";
+
 
 const HomePage: React.FC = () => {
   const [index, setIndex] = useState(0);
@@ -47,14 +68,15 @@ const HomePage: React.FC = () => {
         </AnimatePresence>
       </div>
 
+      {/* slide 1 */}
       <div className="relative grid grid-cols-[50px_1fr_50px]   min-h-screen  pt-[70px]  container mx-auto  ">
         {/* prevSlide */}
-        <div className=" flex justify-center items-center ">
+        <div className=" flex justify-center items-center  ">
           <button
             onClick={prevSlide}
             className="bg-white/20 hover:bg-white/40 text-white px-4 py-2 rounded-full"
           >
-            ◀
+            <GrFormPrevious size={30} />
           </button>
         </div>
 
@@ -103,50 +125,54 @@ const HomePage: React.FC = () => {
             onClick={nextSlide}
             className="bg-white/20 hover:bg-white/40 text-white px-4 py-2 rounded-full"
           >
-            ▶
+            <GrFormNext size={30} />
           </button>
         </div>
       </div>
 
       {/* Dịch vụ  */}
       <section className="bg-white text-black py-12  ">
-        <div className="container mx-auto text-center ">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="container mx-auto  ">
+          
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
             Sản phẩm và dịch vụ
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-[30px] md:gap-[50px] p-6 md:mx-[100px]">
+          <div className="flex flex-wrap justify-center gap-[30px] md:gap-[50px] p-6 md:mx-[100px] ">
             {serviceData.map((item, id) => (
-              <div
+              <motion.div
                 key={id}
                 className="relative group  w-[85%] md:w-70 h-110 md:h-100 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300" //relative group w-64 h-96 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300
                 style={{ backgroundImage: `url(${item.image})` }}
               >
                 {/* Overlay nền xanh */}
-                <div className="absolute inset-0 bg-lime-700 opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-lime-700 opacity-0 group-hover:opacity-80 transition-opacity duration-300   
+                
+                 "
+                ></div>
 
                 {/* Tiêu đề luôn hiện */}
-                <div className="absolute top-0 left-0 p-4 text-white font-bold text-lg z-10">
+                <div className="absolute top-[20px]  p-4 text-gray-100 font-bold text-lg z-10 bg-black/40">
                   {item.title}
                 </div>
 
                 {/* Mô tả - hiệu ứng trượt từ phải */}
                 <div
-                  className="absolute bottom-0 left-0 right-0 p-4 text-white text-sm z-10
+                  className="absolute bottom-0 left-0 right-0 p-4 text-white text-sm z-10 
                    transform translate-x-full opacity-0
                    group-hover:translate-x-0 group-hover:opacity-100
                    transition-all duration-500 ease-out"
                 >
                   {item.content}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Dịch vụ và giải pháp */}
-      <section className="py-12 bg-gray-100   block md:hidden ">
+      <section className="py-12 bg-gray-100  block md:hidden  ">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
             Sản phẩm và dịch vụ
@@ -159,8 +185,16 @@ const HomePage: React.FC = () => {
             slidesPerView={1}
             centeredSlides={true}
             navigation
-            autoplay={{ delay: 2000 }}
+            autoplay={{ delay: 3000 }}
             loop
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
             className="max-w-[90%] mx-auto h-[420px]"
           >
             {serviceData.map((item, id) => (
@@ -182,6 +216,45 @@ const HomePage: React.FC = () => {
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-sm z-10">
                     {item.content}
                   </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white   ">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+            Sản phẩm và dịch vụ
+          </h2>
+
+          {/* Swiper */}
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            centeredSlides={true}
+            navigation
+            autoplay={{ delay: 3000 }}
+            loop
+            breakpoints={{
+              640: {
+                slidesPerView: 3,
+              },
+              1024: {
+                slidesPerView: 5,
+              },
+            }}
+            className="max-w-[90%] mx-auto "
+          >
+            {categories.map((cat, index) => (
+              <SwiperSlide key={index}>
+                <div className="flex flex-col items-center text-center space-y-2 ">
+                  {cat.icon}
+                  <span className="text-sm font-bold text-blue-900">
+                    {cat.label}
+                  </span>
                 </div>
               </SwiperSlide>
             ))}
@@ -215,37 +288,37 @@ export default HomePage;
 
 const serviceData = [
   {
-    image: CLOUD,
-    title: "Công nghệ thông tin và truyền thông",
+    image: IT,
+    title: "Công nghệ thông tin",
     content:
       "Thiết kế nhiều các hệ thống mạng và phần mềm cho các dự án trọng điểm mang tính chất quốc gia ",
   },
   {
-    image: CLOUD,
+    image: CAM,
     title: "Camera giám sát",
     content:
       "Lắp đặt và quản trị sử dụng hệ thống Camera kĩ thuật số để giám sát giao thông; an ninh của công ty, chung cư, tòa nhà… ",
   },
   {
-    image: CLOUD,
+    image: BAOMAT,
     title: "Bảo mật hệ thống ",
     content:
       "cung cấp cho các giải pháp bảo mật tối ưu nhất với mọi yêu cầu của khách hàng. ",
   },
   {
-    image: CLOUD,
+    image: MAYCHU,
     title: "Hệ thống máy chủ và lưu trữ",
     content:
       "Tích hợp và xây dựng giải pháp lưu trữ tối ưu cho hệ thống thông tin của khách hàng, cho phép khách hàng nâng cao khả năng quản lý, tăng hiệu năng truy xuất, đảm bảo tính ổn định, sẵn sàng và độ an toàn của dữ liệu.",
   },
   {
-    image: CLOUD,
+    image: MANHINHLON,
     title: "Hệ thống màn hình lớn",
     content:
       "Màn hình tấm lớn được ghép thành từ nhiều mô-đun bằng kỹ thuật ghép nối đặc biệt sẽ trở thành một màn hình lớn duy nhất. Người sử dụng có thể hiển thị các nguồn tín hiệu video ở bất cứ vị trí nào trên màn hình ",
   },
   {
-    image: CLOUD,
+    image: HOINGHI,
     title: "Hội nghị truyền hình",
     content:
       "Hội nghị truyền hình (Video conference) cho phép những người tham dự tại nhiều địa điểm từ những quốc gia khác nhau có thể nhìn thấy và trao đổi trực tiếp với nhau qua màn hình tivi như đang họp trong cùng một căn phòng. ",
@@ -258,8 +331,7 @@ const introData = [
     title: "Chúng tôi là",
     text: (
       <>
-        {" "}
-        AME TECHNOLOGY <br /> COMPANY LIMITED{" "}
+        AME Technology<br/> company limited
       </>
     ),
     description: [
@@ -285,5 +357,56 @@ const introData = [
     link: " # ",
     image: SECURITY,
   },
+  {
+    title: "chúng tôi là",
+    text: "AI y sinh",
+    description: ["text nhìn thấy xem nó như nào."],
+    textnext: " tải hồ sơ ",
+    link: " # ",
+    image: YSINH,
+  },
+  {
+    title: "chúng tôi là",
+    text: "Hạ tầng mạng",
+    description: ["text nhìn thấy xem nó như nào."],
+    textnext: " tải hồ sơ ",
+    link: " # ",
+    image: NETWORK,
+  },
+  {
+    title: "chúng tôi là",
+    text: "Hạ tầng mạng",
+    description: ["text nhìn thấy xem nó như nào."],
+    textnext: " tải hồ sơ ",
+    link: " # ",
+    image: AIIOT,
+  },
 ];
 
+//============
+const categories = [
+  {
+    icon: <Landmark className="w-10 h-10 text-gray-300" />,
+    label: "CHÍNH PHỦ",
+  },
+  {
+    icon: <Globe className="w-10 h-10 text-gray-300" />,
+    label: "DỊCH VỤ CÔNG",
+  },
+  {
+    icon: <BookOpen className="w-10 h-10 text-gray-300" />,
+    label: "SẢN XUẤT",
+  },
+  {
+    icon: <Banknote className="w-10 h-10 text-gray-300" />,
+    label: "NGÂN HÀNG",
+  },
+  {
+    icon: <HandCoins className="w-10 h-10 text-gray-300" />,
+    label: "BẢO HIỂM",
+  },
+  {
+    icon: <BarChart3 className="w-10 h-10 text-gray-300" />,
+    label: "DỊCH VỤ TÀI CHÍNH",
+  },
+];
