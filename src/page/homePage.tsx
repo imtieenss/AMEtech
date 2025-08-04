@@ -12,6 +12,9 @@ import {
   Banknote,
   HandCoins,
   BarChart3,
+  Cctv,
+  Cog,
+  Cpu,
 } from "lucide-react";
 
 // img logo
@@ -20,21 +23,20 @@ const images = import.meta.glob("../assets/images/logoHome/logo/logo*.png", {
 });
 const logos = Object.values(images).map((mod: any) => mod.default);
 // img intro
-import AMEINTRO from "../assets/images/logoHome/intro/wifi-(1).jpg";
+import AMEINTRO from "../assets/images/logoHome/intro/thumb-1920-1358310.png";
 import CLOUD from "../assets/images/logoHome/intro/cloud.jpg";
 import SECURITY from "../assets/images/logoHome/intro/baomat.jpg";
-import YSINH from "../assets/images/logoHome/intro/baomat.jpg";
-import NETWORK from "../assets/images/logoHome/intro/baomat.jpg";
-import AIIOT from "../assets/images/logoHome/intro/baomat.jpg";
+import YSINH from "../assets/images/logoHome/intro/ysinh.jpeg";
+import NETWORK from "../assets/images/logoHome/intro/net.png";
+//import AIIOT from "../assets/images/logoHome/intro/baomat.jpg";
 
-//img 
+//img
 import IT from "../assets/images/logoHome/intro/wifi-(1).jpg";
 import CAM from "../assets/images/logoHome/intro/cloud.jpg";
 import BAOMAT from "../assets/images/logoHome/intro/baomat.jpg";
 import MANHINHLON from "../assets/images/logoHome/intro/baomat.jpg";
 import MAYCHU from "../assets/images/logoHome/intro/baomat.jpg";
 import HOINGHI from "../assets/images/logoHome/intro/baomat.jpg";
-
 
 const HomePage: React.FC = () => {
   const [index, setIndex] = useState(0);
@@ -129,16 +131,29 @@ const HomePage: React.FC = () => {
           </button>
         </div>
       </div>
+      {/* Indicators  chấm tròn */}
+      <div className="absolute bottom-14 left-1/2 -translate-x-1/2 flex gap-4 z-10">
+        {introData.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIndex(i)}
+            className={`
+        w-5 h-5 rounded-full border
+        ${index === i ? "bg-white" : "bg-transparent border-white"}
+        transition-all duration-300
+      `}
+          />
+        ))}
+      </div>
 
-      {/* Dịch vụ  */}
+      {/* Dịch vụ  và sản phẩm màn to */}
       <section className="bg-white text-black py-12  ">
         <div className="container mx-auto  ">
-          
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
             Sản phẩm và dịch vụ
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-[30px] md:gap-[50px] p-6 md:mx-[100px] ">
+          <div className="flex flex-wrap justify-center gap-[30px] md:gap-[50px] p-6 md:mx-auto container  bg-amber-300 ">
             {serviceData.map((item, id) => (
               <motion.div
                 key={id}
@@ -146,7 +161,8 @@ const HomePage: React.FC = () => {
                 style={{ backgroundImage: `url(${item.image})` }}
               >
                 {/* Overlay nền xanh */}
-                <div className="absolute inset-0 bg-lime-700 opacity-0 group-hover:opacity-80 transition-opacity duration-300   
+                <div
+                  className="absolute inset-0 bg-lime-700 opacity-0 group-hover:opacity-80 transition-opacity duration-300   
                 
                  "
                 ></div>
@@ -171,7 +187,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Dịch vụ và giải pháp */}
+      {/* Dịch vụ  và sản phẩm màn bé */}
       <section className="py-12 bg-gray-100  block md:hidden  ">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
@@ -226,7 +242,7 @@ const HomePage: React.FC = () => {
       <section className="py-12 bg-white   ">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-            Sản phẩm và dịch vụ
+            Lĩnh vực tham gia
           </h2>
 
           {/* Swiper */}
@@ -239,6 +255,9 @@ const HomePage: React.FC = () => {
             autoplay={{ delay: 3000 }}
             loop
             breakpoints={{
+              0: {
+                slidesPerView: 3,
+              },
               640: {
                 slidesPerView: 3,
               },
@@ -246,11 +265,11 @@ const HomePage: React.FC = () => {
                 slidesPerView: 5,
               },
             }}
-            className="max-w-[90%] mx-auto "
+            className=" mx-auto  "
           >
             {categories.map((cat, index) => (
               <SwiperSlide key={index}>
-                <div className="flex flex-col items-center text-center space-y-2 ">
+                <div className="flex flex-col items-center  space-y-2 ">
                   {cat.icon}
                   <span className="text-sm font-bold text-blue-900">
                     {cat.label}
@@ -331,7 +350,8 @@ const introData = [
     title: "Chúng tôi là",
     text: (
       <>
-        AME Technology<br/> company limited
+        AME Technology
+        <br /> company limited
       </>
     ),
     description: [
@@ -367,20 +387,13 @@ const introData = [
   },
   {
     title: "chúng tôi là",
-    text: "Hạ tầng mạng",
+    text: "Network infrastructure",
     description: ["text nhìn thấy xem nó như nào."],
     textnext: " tải hồ sơ ",
     link: " # ",
     image: NETWORK,
   },
-  {
-    title: "chúng tôi là",
-    text: "Hạ tầng mạng",
-    description: ["text nhìn thấy xem nó như nào."],
-    textnext: " tải hồ sơ ",
-    link: " # ",
-    image: AIIOT,
-  },
+  
 ];
 
 //============
@@ -394,7 +407,7 @@ const categories = [
     label: "DỊCH VỤ CÔNG",
   },
   {
-    icon: <BookOpen className="w-10 h-10 text-gray-300" />,
+    icon: <Cog className="w-10 h-10 text-gray-300" />,
     label: "SẢN XUẤT",
   },
   {
@@ -408,5 +421,9 @@ const categories = [
   {
     icon: <BarChart3 className="w-10 h-10 text-gray-300" />,
     label: "DỊCH VỤ TÀI CHÍNH",
+  },
+  {
+    icon: <Cctv className="w-10 h-10 text-gray-300" />,
+    label: "AN NINH",
   },
 ];

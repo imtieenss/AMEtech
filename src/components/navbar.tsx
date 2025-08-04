@@ -9,6 +9,8 @@ import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 
+import { UserRound, } from "lucide-react";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(window.innerWidth >= 768);
 
@@ -83,19 +85,10 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* hotline */}
-        {/* <button
-          onClick={() => navigate("/contactPage")}
-          className="hidden md:block h-12 text-[17px] font-medium text-white bg-gradient-to-r from-[#02b408] to-[#dd021cf9] 
-                               rounded-full px-9 transition-transform duration-300 ease-in-out hover:scale-110 "
-        >
-          Hotline : 0826611611
-        </button> */}
-
         <div className=" hidden md:block">
           <div className="flex items-center gap-2 text-amber-600 text-sm  ">
             {/* Icon tìm kiếm */}
-            <FiSearch className="text-xl" />
+            <UserRound className="text-xl" />
 
             {/* Đường gạch dọc */}
             <div className="w-px h-6 bg-green-700 mx-1" />
