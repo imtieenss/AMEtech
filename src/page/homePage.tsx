@@ -13,7 +13,8 @@ import {
   BarChart3,
   Cctv,
   Cog,
-  
+  Router,
+  Shield,
 } from "lucide-react";
 
 // img logo
@@ -30,7 +31,7 @@ import NETWORK from "../assets/images/logoHome/intro/net.png";
 //import AIIOT from "../assets/images/logoHome/intro/baomat.jpg";
 
 //img
-import IT from "../assets/images/logoHome/intro/wifi-(1).jpg";
+import IT from "../assets/images/logoHome/intro/thumb-1920-1358310.png";
 import CAM from "../assets/images/logoHome/intro/cloud.jpg";
 import BAOMAT from "../assets/images/logoHome/intro/baomat.jpg";
 import MANHINHLON from "../assets/images/logoHome/intro/baomat.jpg";
@@ -72,12 +73,12 @@ const HomePage: React.FC = () => {
       {/* slide 1 */}
       <div className="relative grid grid-cols-[50px_1fr_50px]   min-h-screen  pt-[70px]  container mx-auto  ">
         {/* prevSlide */}
-        <div className=" flex justify-center items-center  ">
+        <div className=" flex justify-center items-center ml-[20px] ">
           <button
             onClick={prevSlide}
-            className="bg-white/20 hover:bg-white/40 text-white px-4 py-2 rounded-full"
+            className="bg-white/20 hover:bg-white/40 text-white px-1 py-1 rounded-full"
           >
-            <GrFormPrevious size={30} />
+            <GrFormPrevious size={40} />
           </button>
         </div>
 
@@ -121,12 +122,12 @@ const HomePage: React.FC = () => {
         </div>
 
         {/* nextSlide */}
-        <div className=" flex justify-center items-center ">
+        <div className=" flex justify-center items-center mr-[20px] ">
           <button
             onClick={nextSlide}
-            className="bg-white/20 hover:bg-white/40 text-white px-4 py-2 rounded-full"
+            className="bg-white/20 hover:bg-white/40 text-white px-1 py-1 rounded-full"
           >
-            <GrFormNext size={30} />
+            <GrFormNext size={40} />
           </button>
         </div>
       </div>
@@ -145,18 +146,19 @@ const HomePage: React.FC = () => {
         ))}
       </div>
 
-      {/* Dịch vụ  và sản phẩm màn to */}
-      <section className="bg-white text-black py-12  ">
-        <div className="container mx-auto  ">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-            Sản phẩm và dịch vụ
-          </h2>
+      {/* sản phẩm và dịch vụ */}
+      <section className="bg-white text-black py-12 container mx-auto ">
+        <h2 className="text-3xl md:text-4xl font-bold mb-[50px] md:mb-[90px] text-center">
+          Sản phẩm và dịch vụ
+        </h2>
 
-          <div className="flex flex-wrap justify-center gap-[30px] md:gap-[50px] p-6 md:mx-auto container  bg-amber-300 ">
+        {/* Dịch vụ  và sản phẩm màn to */}
+        <div className="  hidden md:block ">
+          <div className="flex flex-wrap justify-center  md:gap-[50px]  w-[1200px]  mx-auto  ">
             {serviceData.map((item, id) => (
               <motion.div
                 key={id}
-                className="relative group  w-[85%] md:w-70 h-110 md:h-100 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300" //relative group w-64 h-96 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300
+                className="relative group w-70  h-100 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300" //relative group w-64 h-96 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300
                 style={{ backgroundImage: `url(${item.image})` }}
               >
                 {/* Overlay nền xanh */}
@@ -184,15 +186,9 @@ const HomePage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
 
-      {/* Dịch vụ  và sản phẩm màn bé */}
-      <section className="py-12 bg-gray-100  block md:hidden  ">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-            Sản phẩm và dịch vụ
-          </h2>
-
+        {/* Dịch vụ  và sản phẩm màn bé */}
+        <div className="block md:hidden">
           {/* Swiper */}
           <Swiper
             modules={[Navigation, Autoplay]}
@@ -210,25 +206,22 @@ const HomePage: React.FC = () => {
                 slidesPerView: 3,
               },
             }}
-            className="max-w-[90%] mx-auto h-[420px]"
+            className="max-w-[88%]   "
           >
             {serviceData.map((item, id) => (
-              <SwiperSlide key={id} className="py-4 px-2  justify-items-center">
+              <SwiperSlide key={id} className="  justify-items-center ">
                 <div
                   key={id}
-                  className="relative  w-70 h-100 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300 " //relative group w-64 h-96 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300
+                  className="relative  w-70 h-100 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300  " //relative group w-64 h-96 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300
                   style={{ backgroundImage: `url(${item.image})` }}
                 >
-                  {/* Overlay nền xanh */}
-                  <div className="absolute inset-0 bg-lime-700 opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
-
                   {/* Tiêu đề luôn hiện */}
                   <div className="absolute top-0 left-0 p-4 text-white font-bold text-lg z-10">
                     {item.title}
                   </div>
 
                   {/* Mô tả - hiệu ứng trượt từ phải */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-sm z-10">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-xm z-10">
                     {item.content}
                   </div>
                 </div>
@@ -261,7 +254,7 @@ const HomePage: React.FC = () => {
                 slidesPerView: 3,
               },
               1024: {
-                slidesPerView: 5,
+                slidesPerView: 7,
               },
             }}
             className=" mx-auto  "
@@ -392,7 +385,6 @@ const introData = [
     link: " # ",
     image: NETWORK,
   },
-  
 ];
 
 //============
@@ -404,6 +396,10 @@ const categories = [
   {
     icon: <Globe className="w-10 h-10 text-gray-300" />,
     label: "DỊCH VỤ CÔNG",
+  },
+  {
+    icon: <Shield className="w-10 h-10 text-gray-300" />,
+    label: "QUÂN ĐỘI",
   },
   {
     icon: <Cog className="w-10 h-10 text-gray-300" />,
@@ -419,10 +415,14 @@ const categories = [
   },
   {
     icon: <BarChart3 className="w-10 h-10 text-gray-300" />,
-    label: "DỊCH VỤ TÀI CHÍNH",
+    label: "TÀI CHÍNH",
   },
   {
     icon: <Cctv className="w-10 h-10 text-gray-300" />,
     label: "AN NINH",
+  },
+  {
+    icon: <Router className="w-10 h-10 text-gray-300" />,
+    label: "VIỄN THÔNG",
   },
 ];
