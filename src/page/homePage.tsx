@@ -198,14 +198,6 @@ const HomePage: React.FC = () => {
             navigation
             autoplay={{ delay: 3000 }}
             loop
-            breakpoints={{
-              640: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 3,
-              },
-            }}
             className="max-w-[88%]   "
           >
             {serviceData.map((item, id) => (
