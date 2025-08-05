@@ -38,6 +38,11 @@ import MANHINHLON from "../assets/images/logoHome/intro/baomat.jpg";
 import MAYCHU from "../assets/images/logoHome/intro/baomat.jpg";
 import HOINGHI from "../assets/images/logoHome/intro/baomat.jpg";
 
+//img linh vuc
+import ET1 from "../assets/images/logoHome/linhVuc/ET.png";
+import IT1 from "../assets/images/logoHome/linhVuc/IT.png";
+import EV1 from "../assets/images/logoHome/linhVuc/image.png";
+
 const HomePage: React.FC = () => {
   const [index, setIndex] = useState(0);
   // Auto change slide every 5s
@@ -54,101 +59,149 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      {/* background nền  relative flex items-center justify-center w-full  min-h-screen  */}
-      <div className=" absolute inset-0 z-0">
-        <AnimatePresence>
-          <motion.img
-            key={index}
-            src={current.image}
-            alt="Slide background"
-            className="w-full h-full object-cover absolute inset-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-          />
-        </AnimatePresence>
-      </div>
+      <div className=" h-screen ">
+        {/* background nền  relative flex items-center justify-center w-full  min-h-screen  */}
+        <div className=" absolute inset-0 z-0 h-13/16">
+          <AnimatePresence>
+            <motion.img
+              key={index}
+              src={current.image}
+              alt="Slide background"
+              className="w-full h-full object-cover absolute inset-0"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+            />
+          </AnimatePresence>
+          {/* Lớp phủ đen mờ */}
+          {/* <div className="absolute inset-0 bg-black/60 "></div> */}
 
-      {/* slide 1 */}
-      <div className="relative grid grid-cols-[50px_1fr_50px]   min-h-screen  pt-[70px]  container mx-auto  ">
-        {/* prevSlide */}
-        <div className=" flex justify-center items-center ml-[20px] ">
-          <button
-            onClick={prevSlide}
-            className="bg-white/20 hover:bg-white/40 text-white px-1 py-1 rounded-full"
-          >
-            <GrFormPrevious size={40} />
-          </button>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/70 to-white/80"></div>
+        </div>
+        {/* Indicators  chấm tròn */}
+        <div className="absolute top-[110px] left-1/2 -translate-x-1/2 flex gap-4 z-12">
+          {introData.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              className={`w-4 h-4 rounded-full border
+                        ${
+                          index === i
+                            ? "bg-white"
+                            : "bg-transparent border-white"
+                        }
+                        transition-all duration-300 `}
+            />
+          ))}
         </div>
 
-        {/* nội dung  */}
-        <div className="text-white  container  z-10    ">
-          <div className=" flex flex-col   mt-[100px]  md:mx-[190px] ">
-            <AnimatePresence mode="wait">
-              <motion.h4
-                // key={index}
-                // initial={{ opacity: 0, y: 20 }}
-                // animate={{ opacity: 1, y: 0 }}
-                // exit={{ opacity: 0, y: -20 }}
-                // transition={{ duration: 0.1 }}
-                className="text-lg font-semibold"
-              >
-                {current.title}
-              </motion.h4>
-              <motion.h1
-                // key={index}
-                // initial={{ opacity: 0, y: 20 }}
-                // animate={{ opacity: 1, y: 0 }}
-                // exit={{ opacity: 0, y: -20 }}
-                // transition={{ duration: 0.3 }}
-                className="text-5xl md:text-5xl font-serif "
-              >
-                {current.text}
-              </motion.h1>
-              <p className="text-lg md:text-xl max-w-2xl">
-                {current.description}
-              </p>
-              <div>
-                <a
-                  href={current.link}
-                  className="text-white underline hover:text-blue-300 flex items-center gap-2"
+        {/* slide 1 */}
+        <div className="relative grid grid-cols-[50px_1fr_50px] pt-[70px]  container mx-auto  h-3/4   ">
+          {/* prevSlide */}
+          <div className=" flex justify-center items-center ml-[20px] ">
+            <button
+              onClick={prevSlide}
+              className="bg-white/20 hover:bg-white/40 text-white px-1 py-1 rounded-full"
+            >
+              <GrFormPrevious size={40} />
+            </button>
+          </div>
+
+          {/* nội dung  */}
+          <div className="text-white  container  z-10    ">
+            <div className=" flex flex-col   mt-[100px]  md:mx-[190px] pl-[20px] md:pl-0 pr-[20px]  ">
+              <AnimatePresence mode="wait">
+                <h2
+                  // key={index}
+                  // initial={{ opacity: 0, y: 20 }}
+                  // animate={{ opacity: 1, y: 0 }}
+                  // exit={{ opacity: 0, y: -20 }}
+                  // transition={{ duration: 0.1 }}
+                  className="text-2xl font-semibold"
                 >
-                  {current.textnext}
-                </a>
-              </div>
-            </AnimatePresence>
+                  {current.title}
+                </h2>
+                <h1
+                  // key={index}
+                  // initial={{ opacity: 0, y: 20 }}
+                  // animate={{ opacity: 1, y: 0 }}
+                  // exit={{ opacity: 0, y: -20 }}
+                  // transition={{ duration: 0.3 }}
+                  className="text-4xl md:text-5xl font-serif mt-[10px] "
+                >
+                  {current.text}
+                </h1>
+                <p className="text-xl md:text-2xl text-justify mt-[10px] ">
+                  {current.description}
+                </p>
+                <div>
+                  <a
+                    href={current.link}
+                    className="text-white underline hover:text-blue-300 flex items-center gap-2"
+                  >
+                    {current.textnext}
+                  </a>
+                </div>
+              </AnimatePresence>
+            </div>
+          </div>
+
+          {/* nextSlide */}
+          <div className=" flex justify-center items-center mr-[20px]  ">
+            <button
+              onClick={nextSlide}
+              className="bg-white/20 hover:bg-white/40 text-white px-1 py-1 rounded-full"
+            >
+              <GrFormNext size={40} />
+            </button>
           </div>
         </div>
 
-        {/* nextSlide */}
-        <div className=" flex justify-center items-center mr-[20px] ">
-          <button
-            onClick={nextSlide}
-            className="bg-white/20 hover:bg-white/40 text-white px-1 py-1 rounded-full"
-          >
-            <GrFormNext size={40} />
-          </button>
+        {/* Lĩnh vực */}
+        <div className="  mt-[-90px] z-15">
+          <div className="flex flex-wrap justify-center  gap-10 md:gap-[50px]    mx-auto   ">
+            {linhVucData.map((item, id) => (
+              <div className="  w-70  h-70 overflow-hidden  rounded-xl">
+                <motion.div
+                  key={id}
+                  className=" group w-full  h-full  shadow-lg  bg-cover bg-center   transition-transform duration-300 transform hover:scale-105 flex justify-center items-center " //relative group w-64 h-96 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300
+                  style={{ backgroundImage: `url(${item.image})` }}
+                >
+                  {/* Lớp phủ đen mờ */}
+                  <div className="absolute inset-0 bg-black/30 "></div>
+                  {/* Overlay nền  */}
+                  <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-80 transition-opacity duration-300   "></div>
+
+                  {/* Tiêu đề  */}
+                  <div
+                    className="absolute  top-[80px]   text-white font-bold text-4xl z-10  text-center
+                                transition-all duration-300 ease-in-out 
+                                group-hover:-translate-y-2 "
+                  >
+                    {item.title}
+                  </div>
+
+                  {/* Mô tả - hiệu ứng trượt từ phải */}
+                  <div
+                    className="absolute bottom-0 left-0 right-0 p-4 text-white text-sm z-10 
+                                transform translate-x-full opacity-0
+                                group-hover:translate-x-0 group-hover:opacity-100
+                                transition-all duration-500 ease-out"
+                  >
+                    {item.content}
+                  </div>
+                </motion.div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-      {/* Indicators  chấm tròn */}
-      <div className="absolute bottom-14 left-1/2 -translate-x-1/2 flex gap-4 z-10">
-        {introData.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setIndex(i)}
-            className={`
-        w-5 h-5 rounded-full border
-        ${index === i ? "bg-white" : "bg-transparent border-white"}
-        transition-all duration-300
-      `}
-          />
-        ))}
-      </div>
 
+    
       {/* sản phẩm và dịch vụ */}
-      <section className="bg-white text-black py-12 container mx-auto ">
-        <h2 className="text-3xl md:text-4xl font-bold mb-[50px] md:mb-[90px] text-center">
+      <section className="bg-white text-black py-12 container mx-auto  ">
+        <h2 className="text-3xl md:text-4xl font-bold mb-[60px] md:mb-[70px] text-center  mt-[650px] md:mt-[50px] ">
           Sản phẩm và dịch vụ
         </h2>
 
@@ -196,15 +249,15 @@ const HomePage: React.FC = () => {
             slidesPerView={1}
             centeredSlides={true}
             navigation
-            autoplay={{ delay: 3000 }}
+            autoplay={{ delay: 2000 }}
             loop
             className="max-w-[88%]  "
           >
             {serviceData.map((item, id) => (
-              <SwiperSlide key={id} className="  "> //justify-items-center
+              <SwiperSlide key={id} className="  ">
                 <div
                   key={id}
-                  className="relative  w-70 h-100 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300  bg-red-300  mx-auto " //relative group w-64 h-96 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300
+                  className="relative  w-70 h-100 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300 mx-auto " //relative group w-64 h-96 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300
                   style={{ backgroundImage: `url(${item.image})` }}
                 >
                   {/* Tiêu đề luôn hiện */}
@@ -223,9 +276,10 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
+      {/* Lĩnh vực tham gia */}
       <section className="py-12 bg-white   ">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold  text-center mb-[80px] ">
             Lĩnh vực tham gia
           </h2>
 
@@ -311,20 +365,37 @@ const serviceData = [
   {
     image: MAYCHU,
     title: "Hệ thống máy chủ và lưu trữ",
-    content:
-      "Tích hợp và xây dựng giải pháp lưu trữ tối ưu cho hệ thống thông tin của khách hàng, cho phép khách hàng nâng cao khả năng quản lý, tăng hiệu năng truy xuất, đảm bảo tính ổn định, sẵn sàng và độ an toàn của dữ liệu.",
+    content: (
+      <>
+        Tích hợp và xây dựng giải pháp lưu trữ tối ưu cho hệ thống thông tin của
+        khách hàng, cho phép khách hàng nâng cao khả năng quản lý, tăng hiệu
+        năng truy xuất, đảm bảo tính ổn định, sẵn sàng và độ an toàn của dữ
+        liệu.
+      </>
+    ),
   },
   {
     image: MANHINHLON,
     title: "Hệ thống màn hình lớn",
-    content:
-      "Màn hình tấm lớn được ghép thành từ nhiều mô-đun bằng kỹ thuật ghép nối đặc biệt sẽ trở thành một màn hình lớn duy nhất. Người sử dụng có thể hiển thị các nguồn tín hiệu video ở bất cứ vị trí nào trên màn hình ",
+    content: (
+      <>
+        Màn hình tấm lớn được ghép thành từ nhiều mô-đun bằng kỹ thuật ghép nối
+        đặc biệt sẽ trở thành một màn hình lớn duy nhất. Người sử dụng có thể
+        hiển thị các nguồn tín hiệu video ở bất cứ vị trí nào trên màn hình.
+      </>
+    ),
   },
   {
     image: HOINGHI,
     title: "Hội nghị truyền hình",
-    content:
-      "Hội nghị truyền hình (Video conference) cho phép những người tham dự tại nhiều địa điểm từ những quốc gia khác nhau có thể nhìn thấy và trao đổi trực tiếp với nhau qua màn hình tivi như đang họp trong cùng một căn phòng. ",
+    content: (
+      <>
+        Hội nghị truyền hình (Video conference) cho phép những người tham dự tại
+        nhiều địa điểm từ những quốc gia khác nhau có thể nhìn thấy và trao đổi
+        trực tiếp với nhau qua màn hình tivi như đang họp trong cùng một căn
+        phòng.
+      </>
+    ),
   },
 ];
 
@@ -335,12 +406,17 @@ const introData = [
     text: (
       <>
         AME Technology
-        <br /> company limited
+         company limited
       </>
     ),
-    description: [
-      "Với mục tiêu cung cấp phần mềm chất lượng cao, tối ưu hóa quy trình công việc, tăng năng suất và tiết kiệm chi phí. Cùng với sự phát triển của ngành Viễn thông và Tin học, AME TECH. LTD cũng đã phát triển mạnh mẽ cả về cơ sở vật chất, khoa học công nghệ và năng lực cán bộ.",
-    ],
+    description: (
+      <>
+        Với mục tiêu cung cấp phần mềm chất lượng cao, tối ưu hóa quy trình công
+        việc, tăng năng suất và tiết kiệm chi phí. Cùng với sự phát triển của
+        ngành Viễn thông và Tin học, AME TECH. LTD cũng đã phát triển mạnh mẽ cả
+        về cơ sở vật chất, khoa học công nghệ và năng lực cán bộ.
+      </>
+    ),
     textnext: " Tải hồ sơ công ty ",
     link: " # ",
     image: AMEINTRO,
@@ -416,5 +492,41 @@ const categories = [
   {
     icon: <Router className="w-10 h-10 text-gray-300" />,
     label: "VIỄN THÔNG",
+  },
+];
+
+const linhVucData = [
+  {
+    image: ET1,
+    title: (
+      <>
+        Điện tử
+        <br />
+        Viễn thông
+      </>
+    ),
+    content: <>HUST.</>,
+  },
+  {
+    image: EV1,
+    title: (
+      <>
+        Công nghệ
+        <br />
+        Môi trường
+      </>
+    ),
+    content: <>HUST.</>,
+  },
+  {
+    image: IT1,
+    title: (
+      <>
+        Công nghệ
+        <br />
+        Thông tin
+      </>
+    ),
+    content: <>HUST.</>,
   },
 ];

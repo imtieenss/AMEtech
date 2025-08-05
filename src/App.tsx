@@ -9,6 +9,7 @@ import ProducePage from "./page/producePage";
 import ServicePage from "./page/servicePage";
 // import SolutionPage from "./page/solutionPage";
 import Icons from "./components/icon"
+import ScrollToTop from "./components/ScrollToTop"  ;
 
 const App: React.FC = () => {
     return (
@@ -16,7 +17,8 @@ const App: React.FC = () => {
             <>
                 <Navbar />
                 <Icons/>
-                <Routes>
+                <ScrollToTop>
+                    <Routes>
                     <Route path="/" element={<HomePage />} /> 
                     <Route path="/profilePage" element={<ProfilePage />} />
                     <Route path="/producePage" element={<ProducePage />} />
@@ -25,6 +27,10 @@ const App: React.FC = () => {
                     <Route path="/contactPage" element={<ContactPage />} />
                     <Route path="*" element={<div>NotFoundPage</div>} /> 
                 </Routes>
+
+                </ScrollToTop>
+
+                
                 <Footer />
             </>
     //    </BrowserRouter>

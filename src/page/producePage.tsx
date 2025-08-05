@@ -44,8 +44,8 @@ const ProducePage: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     className="text-4xl md:text-6xl font-bold">
-                    <span className=" bg-teal-600  text-transparent bg-clip-text">
-                        Một số sản phẩm web nổi bật
+                    <span className=" bg-teal-600  text-transparent bg-clip-text font-sans ">
+                        DỰ ÁN TIÊU BIỂU
                     </span>
                 </motion.h2>
             </div>
