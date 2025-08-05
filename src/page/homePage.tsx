@@ -159,7 +159,7 @@ const HomePage: React.FC = () => {
         </div>
 
         {/* Lĩnh vực */}
-        <div className="  mt-[-90px] z-15">
+        <div className="   md:mt-[-90px] z-15">
           <div className="flex flex-wrap justify-center  gap-10 md:gap-[50px]    mx-auto   ">
             {linhVucData.map((item, id) => (
               <div className="  w-70  h-70 overflow-hidden  rounded-xl">
