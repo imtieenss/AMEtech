@@ -159,7 +159,7 @@ const HomePage: React.FC = () => {
         </div>
 
         {/* Lĩnh vực */}
-        <div className="   md:mt-[-90px] z-15">
+        <div className="    md:mt-[-90px] z-15">
           <div className="flex flex-wrap justify-center  gap-10 md:gap-[50px]    mx-auto   ">
             {linhVucData.map((item, id) => (
               <div className="  w-70  h-70 overflow-hidden  rounded-xl">
@@ -201,7 +201,7 @@ const HomePage: React.FC = () => {
     
       {/* sản phẩm và dịch vụ */}
       <section className="bg-white text-black py-12 container mx-auto  ">
-        <h2 className="text-3xl md:text-4xl font-bold mb-[60px] md:mb-[70px] text-center  mt-[650px] md:mt-[50px] ">
+        <h2 className="text-3xl md:text-4xl font-bold mb-[60px] md:mb-[70px] text-center  mt-[700px] md:mt-[50px] ">
           Sản phẩm và dịch vụ
         </h2>
 
