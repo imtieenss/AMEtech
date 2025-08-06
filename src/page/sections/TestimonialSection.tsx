@@ -6,7 +6,7 @@ type Testimonial = {
   feedback: string;
 };
 
-const TestimonialCard: React.FC<Testimonial> = ({ name, role, feedback }) => (
+const TestimonialCard: React.FC<Testimonial> = ({ name, feedback }) => (
   <div className="flex flex-col overflow-hidden bg-white shadow-xl rounded-2xl">
     <div className="flex flex-col justify-between flex-1 px-6 py-8">
       <div className="flex-1">
