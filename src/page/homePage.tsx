@@ -28,15 +28,16 @@ import CLOUD from "../assets/images/logoHome/intro/cloud.jpg";
 import SECURITY from "../assets/images/logoHome/intro/baomat.jpg";
 import YSINH from "../assets/images/logoHome/intro/ysinh.jpeg";
 import NETWORK from "../assets/images/logoHome/intro/net.png";
+
 //import AIIOT from "../assets/images/logoHome/intro/baomat.jpg";
 
-//img
-import IT from "../assets/images/logoHome/intro/thumb-1920-1358310.png";
-import CAM from "../assets/images/logoHome/intro/cloud.jpg";
-import BAOMAT from "../assets/images/logoHome/intro/baomat.jpg";
-import MANHINHLON from "../assets/images/logoHome/intro/baomat.jpg";
-import MAYCHU from "../assets/images/logoHome/intro/baomat.jpg";
-import HOINGHI from "../assets/images/logoHome/intro/baomat.jpg";
+//img dichvu
+import IT from "../assets/images/logoHome/dichvu/IT.png";
+import CAM from "../assets/images/logoHome/dichvu/cam.png";
+import BAOMAT from "../assets/images/logoHome/dichvu/security.jpg";
+import MANHINHLON from "../assets/images/logoHome/dichvu/nhieumanhinnh.png";
+import MAYCHU from "../assets/images/logoHome/dichvu/maychu.png";
+import HOINGHI from "../assets/images/logoHome/dichvu/hoinghi.png";
 
 //img linh vuc
 import ET1 from "../assets/images/logoHome/linhVuc/ET.png";
@@ -112,33 +113,17 @@ const HomePage: React.FC = () => {
           <div className="text-white  container  z-10    ">
             <div className=" flex flex-col   mt-[100px]  md:mx-[190px] pl-[20px] md:pl-0 pr-[20px]  ">
               <AnimatePresence mode="wait">
-                <h2
-                  // key={index}
-                  // initial={{ opacity: 0, y: 20 }}
-                  // animate={{ opacity: 1, y: 0 }}
-                  // exit={{ opacity: 0, y: -20 }}
-                  // transition={{ duration: 0.1 }}
-                  className="text-2xl font-semibold"
-                >
-                  {current.title}
-                </h2>
-                <h1
-                  // key={index}
-                  // initial={{ opacity: 0, y: 20 }}
-                  // animate={{ opacity: 1, y: 0 }}
-                  // exit={{ opacity: 0, y: -20 }}
-                  // transition={{ duration: 0.3 }}
-                  className="text-4xl md:text-5xl font-serif mt-[10px] "
-                >
+                <h2 className="text-2xl font-semibold">{current.title}</h2>
+                <h1 className="text-4xl md:text-5xl font-semibold mt-[10px]  ">
                   {current.text}
                 </h1>
-                <p className="text-xl md:text-2xl text-justify mt-[10px] ">
+                <p className="text-xl md:text-2xl text-justify mt-[10px]   md:w-1/2 ">
                   {current.description}
                 </p>
                 <div>
                   <a
                     href={current.link}
-                    className="text-white underline hover:text-blue-300 flex items-center gap-2"
+                    className="text-white underline hover:text-blue-300 flex items-center gap-2 mt-2"
                   >
                     {current.textnext}
                   </a>
@@ -184,7 +169,7 @@ const HomePage: React.FC = () => {
 
                   {/* Mô tả - hiệu ứng trượt từ phải */}
                   <div
-                    className="absolute bottom-0 left-0 right-0 p-4 text-white text-sm z-10 
+                    className="absolute bottom-0 left-0 right-0 p-5 text-white text-lg text-center z-10  
                                 transform translate-x-full opacity-0
                                 group-hover:translate-x-0 group-hover:opacity-100
                                 transition-all duration-500 ease-out"
@@ -198,44 +183,46 @@ const HomePage: React.FC = () => {
         </div>
       </div>
 
-    
       {/* sản phẩm và dịch vụ */}
       <section className="bg-white text-black py-12 container mx-auto  ">
-        <h2 className="text-3xl md:text-4xl font-bold mb-[60px] md:mb-[70px] text-center  mt-[700px] md:mt-[50px] ">
-          Sản phẩm và dịch vụ
+        <h2 className="text-3xl md:text-4xl font-bold mb-[60px] md:mb-[70px] text-center  mt-[700px] md:mt-[50px] tex-600 ">
+          <span className="    font-bold text-teal-600  ">
+               Dịch vụ hoạt động
+           </span>
+          
         </h2>
 
         {/* Dịch vụ  và sản phẩm màn to */}
         <div className="  hidden md:block ">
           <div className="flex flex-wrap justify-center  md:gap-[50px]  w-[1200px]  mx-auto  ">
             {serviceData.map((item, id) => (
-              <motion.div
-                key={id}
-                className="relative group w-70  h-100 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300" //relative group w-64 h-96 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300
-                style={{ backgroundImage: `url(${item.image})` }}
-              >
-                {/* Overlay nền xanh */}
-                <div
-                  className="absolute inset-0 bg-lime-700 opacity-0 group-hover:opacity-80 transition-opacity duration-300   
-                
-                 "
-                ></div>
+              <div className="w-70  h-100 relative rounded-xl overflow-hidden ">
+                <motion.div
+                  key={id}
+                  className=" group w-full  h-full  shadow-lg  bg-cover bg-center  transition-transform duration-300 transform hover:scale-105 flex justify-center items-center " //relative group w-64 h-96 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300
+                  style={{ backgroundImage: `url(${item.image})` }}
+                >
+                  {/* Lớp phủ đen mờ */}
+                  <div className="absolute inset-0 bg-black/30 "></div>
+                  {/* Overlay nền xanh */}
+                  <div className="absolute inset-0 bg-green-900 opacity-0 group-hover:opacity-80 transition-opacity duration-300   "></div>
 
-                {/* Tiêu đề luôn hiện */}
-                <div className="absolute top-[20px]  p-4 text-gray-100 font-bold text-lg z-10 bg-black/40">
-                  {item.title}
-                </div>
+                  {/* Tiêu đề luôn hiện */}
+                  <div className="absolute top-[20px]  p-4 text-white font-bold text-3xl z-10 text-center ">
+                    {item.title}
+                  </div>
 
-                {/* Mô tả - hiệu ứng trượt từ phải */}
-                <div
-                  className="absolute bottom-0 left-0 right-0 p-4 text-white text-sm z-10 
+                  {/* Mô tả - hiệu ứng trượt từ phải */}
+                  <div
+                    className="absolute top-[150px] left-0 right-0 p-4 text-white text-xl z-10 text-justify mx-3 
                    transform translate-x-full opacity-0
                    group-hover:translate-x-0 group-hover:opacity-100
                    transition-all duration-500 ease-out"
-                >
-                  {item.content}
-                </div>
-              </motion.div>
+                  >
+                    {item.content}
+                  </div>
+                </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -257,16 +244,18 @@ const HomePage: React.FC = () => {
               <SwiperSlide key={id} className="  ">
                 <div
                   key={id}
-                  className="relative  w-70 h-100 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300 mx-auto " //relative group w-64 h-96 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300
+                  className="relative  w-70 h-100 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300 mx-auto flex justify-center items-center " //relative group w-64 h-96 rounded-xl overflow-hidden shadow-lg  bg-cover bg-center transition-all duration-300
                   style={{ backgroundImage: `url(${item.image})` }}
                 >
+                  {/* Lớp phủ đen mờ */}
+                  <div className="absolute inset-0 bg-black/50 "></div>
                   {/* Tiêu đề luôn hiện */}
-                  <div className="absolute top-0 left-0 p-4 text-white font-bold text-lg z-10">
+                  <div className="absolute top-[20px]  p-4 text-white font-bold text-3xl z-10 text-center 0">
                     {item.title}
                   </div>
 
                   {/* Mô tả - hiệu ứng trượt từ phải */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-xm z-10">
+                  <div className="absolute top-[150px] left-0 right-0 p-4 text-white text-xl z-10 text-justify mx-2  ">
                     {item.content}
                   </div>
                 </div>
@@ -279,8 +268,12 @@ const HomePage: React.FC = () => {
       {/* Lĩnh vực tham gia */}
       <section className="py-12 bg-white   ">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold  text-center mb-[80px] ">
-            Lĩnh vực tham gia
+          <h2 className="text-3xl md:text-4xl   text-center mb-[80px] ">
+
+            <span className="   font-bold text-teal-600  ">
+                Lĩnh vực tham gia
+           </span>
+           
           </h2>
 
           {/* Swiper */}
@@ -290,7 +283,7 @@ const HomePage: React.FC = () => {
             slidesPerView={1}
             centeredSlides={true}
             navigation
-            autoplay={{ delay: 3000 }}
+            autoplay={{ delay: 900 }}
             loop
             breakpoints={{
               0: {
@@ -324,6 +317,18 @@ const HomePage: React.FC = () => {
         <TestimonialSection />
       </div>
 
+
+      <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }} 
+                className="container mx-auto  px-6 py-6 text-center text-4xl md:text-6xl font-bold"
+                > 
+                    <h1 className="bg-teal-600  bg-clip-text text-transparent">
+                    Đối tác chiến lược
+                    </h1>
+            </motion.div>
+
       {/* Logo Ticker */}
       <div className="overflow-hidden py-3 mt-6">
         <div className="flex w-max animate-marquee space-x-8">
@@ -343,117 +348,224 @@ const HomePage: React.FC = () => {
 
 export default HomePage;
 
+// const serviceData = [
+//   {
+//     image: IT,
+//     title: (<>  Công nghệ <br/> thông tin </>),
+//     content:
+//       "Thiết kế nhiều các hệ thống mạng và phần mềm cho các dự án trọng điểm mang tính chất quốc gia ",
+//   },
+//   {
+//     image: CAM,
+//     title: "Camera giám sát",
+//     content:
+//       "Lắp đặt và quản trị sử dụng hệ thống Camera kĩ thuật số để giám sát giao thông; an ninh của công ty, chung cư, tòa nhà… ",
+//   },
+//   {
+//     image: BAOMAT,
+//     title: "Bảo mật hệ thống ",
+//     content:
+//       "cung cấp cho các giải pháp bảo mật tối ưu nhất với mọi yêu cầu của khách hàng. ",
+//   },
+//   {
+//     image: MAYCHU,
+//     title: "Hệ thống máy chủ và lưu trữ",
+//     content: (
+//       <>
+//         Tích hợp và xây dựng giải pháp lưu trữ tối ưu cho hệ thống thông tin của
+//         khách hàng, cho phép khách hàng nâng cao khả năng quản lý, tăng hiệu
+//         năng truy xuất, đảm bảo tính ổn định, sẵn sàng và độ an toàn của dữ
+//         liệu.
+//       </>
+//     ),
+//   },
+//   {
+//     image: MANHINHLON,
+//     title: "Hệ thống màn hình lớn",
+//     content: (
+//       <>
+//         Màn hình tấm lớn được ghép thành từ nhiều mô-đun bằng kỹ thuật ghép nối
+//         đặc biệt sẽ trở thành một màn hình lớn duy nhất. Người sử dụng có thể
+//         hiển thị các nguồn tín hiệu video ở bất cứ vị trí nào trên màn hình.
+//       </>
+//     ),
+//   },
+//   {
+//     image: HOINGHI,
+//     title: (<>  Hội nghị <br/> truyền hình </>),
+//     content: (
+//       <>
+//         Hội nghị truyền hình (Video conference) cho phép những người tham dự tại
+//         nhiều địa điểm từ những quốc gia khác nhau có thể nhìn thấy và trao đổi
+//         trực tiếp với nhau qua màn hình tivi như đang họp trong cùng một căn
+//         phòng.
+//       </>
+//     ),
+//   },
+// ];
+
 const serviceData = [
   {
     image: IT,
-    title: "Công nghệ thông tin",
+    title: (
+      <>
+        {" "}
+        Phát triển <br /> phần mềm{" "}
+      </>
+    ),
     content:
-      "Thiết kế nhiều các hệ thống mạng và phần mềm cho các dự án trọng điểm mang tính chất quốc gia ",
+      "Phát triển và triển khai các giải pháp phần mềm phù hợp với nhu cầu doanh nghiệp, giúp tối ưu quy trình, nâng cao hiệu suất và khả năng quản lý",
   },
   {
     image: CAM,
     title: "Camera giám sát",
     content:
-      "Lắp đặt và quản trị sử dụng hệ thống Camera kĩ thuật số để giám sát giao thông; an ninh của công ty, chung cư, tòa nhà… ",
+      "Cung cấp, lắp đặt và vận hành hệ thống camera giám sát cho giao thông, tòa nhà, công ty và khu dân cư.",
   },
   {
     image: BAOMAT,
-    title: "Bảo mật hệ thống ",
+    title: "Bảo mật hệ thống",
     content:
-      "cung cấp cho các giải pháp bảo mật tối ưu nhất với mọi yêu cầu của khách hàng. ",
+      "Đưa ra các giải pháp bảo mật tối ưu, giúp doanh nghiệp phòng tránh và xử lý rủi ro an ninh mạng hiệu quả.",
   },
   {
     image: MAYCHU,
     title: "Hệ thống máy chủ và lưu trữ",
-    content: (
-      <>
-        Tích hợp và xây dựng giải pháp lưu trữ tối ưu cho hệ thống thông tin của
-        khách hàng, cho phép khách hàng nâng cao khả năng quản lý, tăng hiệu
-        năng truy xuất, đảm bảo tính ổn định, sẵn sàng và độ an toàn của dữ
-        liệu.
-      </>
-    ),
+    content:
+      "Xây dựng giải pháp lưu trữ giúp tăng tốc truy xuất, ổn định hệ thống và bảo vệ an toàn dữ liệu cho doanh nghiệp.",
   },
   {
     image: MANHINHLON,
     title: "Hệ thống màn hình lớn",
-    content: (
-      <>
-        Màn hình tấm lớn được ghép thành từ nhiều mô-đun bằng kỹ thuật ghép nối
-        đặc biệt sẽ trở thành một màn hình lớn duy nhất. Người sử dụng có thể
-        hiển thị các nguồn tín hiệu video ở bất cứ vị trí nào trên màn hình.
-      </>
-    ),
+    content:
+      "Thiết kế và lắp đặt các màn hình ghép nối chuyên dụng để hiển thị video linh hoạt trong không gian rộng lớn.",
   },
   {
     image: HOINGHI,
-    title: "Hội nghị truyền hình",
-    content: (
+    title: (
       <>
-        Hội nghị truyền hình (Video conference) cho phép những người tham dự tại
-        nhiều địa điểm từ những quốc gia khác nhau có thể nhìn thấy và trao đổi
-        trực tiếp với nhau qua màn hình tivi như đang họp trong cùng một căn
-        phòng.
+        Hội nghị <br /> truyền hình
       </>
     ),
+    content:
+      "Triển khai giải pháp hội nghị trực tuyến giúp kết nối và trao đổi từ xa như đang họp trong cùng một phòng.",
   },
 ];
 
 //==================
+// const introData = [
+//   {
+//     title: "Chúng tôi là",
+//     text: <>ATN Technology company limited</>,
+//     description: (
+//       <>
+//         Với mục tiêu cung cấp phần mềm chất lượng cao, tối ưu hóa quy trình công
+//         việc, tăng năng suất và tiết kiệm chi phí. Cùng với sự phát triển của
+//         ngành Viễn thông và Tin học, ATN TECH. LTD cũng đã phát triển mạnh mẽ cả
+//         về cơ sở vật chất, khoa học công nghệ và năng lực cán bộ.
+//       </>
+//     ),
+//     textnext: " Tải hồ sơ công ty ",
+//     link: " # ",
+//     image: AMEINTRO,
+//   },
+//   {
+//     title: "Tối ưu hạ tầng",
+//     text: "Dữ liệu đám mây và cơ sở dữ liệu",
+//     description: [""],
+//     textnext: " ",
+//     link: "  ",
+//     image: CLOUD,
+//   },
+//   {
+//     title: "Bảo mật cơ sở ",
+//     text: "Bảo  mật và an toàn thông tin ",
+//     description: [""],
+//     textnext: " tải hồ sơ ",
+//     link: " # ",
+//     image: SECURITY,
+//   },
+//   {
+//     title: "",
+//     text: "ứng dụng công nghệ vào y tế",
+//     description: [""],
+//     textnext: "  ",
+//     link: " # ",
+//     image: YSINH,
+//   },
+//   {
+//     title: "",
+//     text: "giải pháp hạ tầng mạng",
+//     description: [""],
+//     textnext: "  ",
+//     link: " # ",
+//     image: NETWORK,
+//   },
+// ];
 const introData = [
   {
     title: "Chúng tôi là",
-    text: (
-      <>
-        AME Technology
-         company limited
-      </>
-    ),
+    text: <>AME Technology Company Limited</>,
     description: (
       <>
-        Với mục tiêu cung cấp phần mềm chất lượng cao, tối ưu hóa quy trình công
-        việc, tăng năng suất và tiết kiệm chi phí. Cùng với sự phát triển của
-        ngành Viễn thông và Tin học, AME TECH. LTD cũng đã phát triển mạnh mẽ cả
-        về cơ sở vật chất, khoa học công nghệ và năng lực cán bộ.
+        Chúng tôi chuyên cung cấp phần mềm chất lượng cao, giúp doanh nghiệp tối ưu hóa quy trình làm việc, nâng cao hiệu suất và tiết kiệm chi phí vận hành trong thời đại số.
       </>
     ),
-    textnext: " Tải hồ sơ công ty ",
-    link: " # ",
+    textnext: "Tải hồ sơ công ty",
+    link: "#",
     image: AMEINTRO,
   },
   {
-    title: "chúng tôi là",
-    text: "Cloud",
-    description: ["text nhìn thấy xem nó như nào."],
-    textnext: " tải hồ sơ ",
-    link: "  ",
+    title: "Hạ tầng tối ưu",
+    text: "Giải pháp đám mây & dữ liệu",
+    description: (
+      <>
+        Chúng tôi xây dựng các hệ thống lưu trữ dữ liệu trên nền tảng đám mây an toàn, linh hoạt và có khả năng mở rộng cao, phù hợp với mọi quy mô doanh nghiệp.
+      </>
+    ),
+    textnext: "Tìm hiểu thêm",
+    link: "#",
     image: CLOUD,
   },
   {
-    title: "chúng tôi là",
-    text: "security ",
-    description: ["text nhìn thấy xem nó như nào."],
-    textnext: " tải hồ sơ ",
-    link: " # ",
+    title: "Bảo mật thông tin",
+    text: "An toàn dữ liệu & hệ thống",
+    description: (
+      <>
+        Đảm bảo an toàn toàn diện cho hạ tầng CNTT thông qua các giải pháp bảo mật hiện đại, ngăn chặn rủi ro và bảo vệ dữ liệu khỏi các mối đe dọa ngày càng tinh vi.
+      </>
+    ),
+    textnext: "Tìm hiểu thêm",
+    link: "#",
     image: SECURITY,
   },
   {
-    title: "chúng tôi là",
-    text: "AI y sinh",
-    description: ["text nhìn thấy xem nó như nào."],
-    textnext: " tải hồ sơ ",
-    link: " # ",
+    title: "Công nghệ y tế",
+    text: "Ứng dụng số trong chăm sóc sức khỏe",
+    description: (
+      <>
+        Chúng tôi cung cấp giải pháp công nghệ giúp nâng cao hiệu quả quản lý, khám chữa bệnh và chăm sóc sức khỏe, góp phần hiện đại hóa ngành y tế.
+      </>
+    ),
+    textnext: "Khám phá ngay",
+    link: "#",
     image: YSINH,
   },
   {
-    title: "chúng tôi là",
-    text: "Network infrastructure",
-    description: ["text nhìn thấy xem nó như nào."],
-    textnext: " tải hồ sơ ",
-    link: " # ",
+    title: "Giải pháp mạng",
+    text: "Hạ tầng kết nối hiện đại",
+    description: (
+      <>
+        Thiết kế và triển khai hạ tầng mạng mạnh mẽ, ổn định và an toàn, đảm bảo kết nối liên tục cho các hệ thống công nghệ thông tin trong doanh nghiệp.
+      </>
+    ),
+    textnext: "Xem chi tiết",
+    link: "#",
     image: NETWORK,
   },
 ];
+
+
 
 //============
 const categories = [
@@ -505,7 +617,7 @@ const linhVucData = [
         Viễn thông
       </>
     ),
-    content: <>HUST.</>,
+    content: <>Xây dựng hệ thống truyền thông và thiết bị điện tử.</>,
   },
   {
     image: EV1,
@@ -516,7 +628,7 @@ const linhVucData = [
         Môi trường
       </>
     ),
-    content: <>HUST.</>,
+    content: <>Ứng dụng công nghệ để bảo vệ môi trường sống.</>,
   },
   {
     image: IT1,
@@ -527,6 +639,6 @@ const linhVucData = [
         Thông tin
       </>
     ),
-    content: <>HUST.</>,
+    content: <>Phát triển phần mềm và hệ thống quản lý thông tin.</>,
   },
 ];

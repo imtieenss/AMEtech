@@ -56,7 +56,7 @@ const ProducePage: React.FC = () => {
                     <motion.img
                         src={project.image}
                         alt={project.title}
-                        className=" object-cover aspect-[4/3] shadow-md  "  //w-full h-[250px] object-cover
+                        className=" object-cover aspect-[4/3] shadow-md  "  //  transition-transform duration-300 transform hover:scale-105
                         whileHover={{ scale: 1.1 } }
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
