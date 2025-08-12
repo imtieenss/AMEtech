@@ -40,7 +40,7 @@ const ContactPage: React.FC = () => {
                         >
                             <FaCalendarAlt className="text-xl mt-1 mr-3" />
                             <div>
-                                <p>Monday - Saturday</p>
+                                <p>Monday - Friday</p>
                                 <p className="text-sm text-gray-600">7:30 am - 17:00 pm</p>
                             </div>
                         </motion.div>

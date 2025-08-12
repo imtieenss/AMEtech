@@ -84,9 +84,9 @@ const ServicePage: React.FC = () => {
                 />
               </div>
 
-              <div className=" text-center  col-span-2  md:py-[100px]">
+              <div className=" text-center  col-span-2  md:py-[100px] mt-[60px] md:mt-0 " >
                 <motion.h2
-                  className="text-4xl md:text-6xl  font-bold text-teal-600  "
+                  className="text-4xl md:text-6xl  font-bold text-teal-600 mb-[20px] md:mb-0  "
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
