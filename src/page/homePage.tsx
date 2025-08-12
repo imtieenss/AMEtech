@@ -58,7 +58,6 @@ const HomePage: React.FC = () => {
     setIndex((index - 1 + introData.length) % introData.length);
   const current = introData[index];
 
-
   return (
     <>
       <div className=" h-screen ">
@@ -134,7 +133,6 @@ const HomePage: React.FC = () => {
           </div>
           {/* //---------- */}
 
-   
           {/* nextSlide */}
           <div className=" flex justify-center items-center mr-[20px]  ">
             <button
@@ -188,11 +186,12 @@ const HomePage: React.FC = () => {
 
       {/* sản phẩm và dịch vụ */}
       <section className="bg-white text-black py-12 container mx-auto  ">
-        <h2 className="text-3xl md:text-4xl font-bold mb-[60px] md:mb-[70px] text-center  mt-[700px] md:mt-[50px] tex-600 ">
+        <h2 className="text-3xl md:text-5xl font-bold mb-[60px] md:mb-[70px] text-center  mt-[700px] md:mt-[50px] tex-600 ">
           <span className="    font-bold text-teal-600  ">
             Dịch vụ hoạt động
           </span>
         </h2>
+        
 
         {/* Dịch vụ  và sản phẩm màn to */}
         <div className="  hidden md:block ">
@@ -270,13 +269,16 @@ const HomePage: React.FC = () => {
       {/* Lĩnh vực tham gia */}
       <section className="py-12 bg-white   ">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl   text-center mb-[80px] ">
+          {/* <h2 className="text-3xl md:text-4xl   text-center mb-[80px] ">
             <span className="   font-bold text-teal-600  ">
               Lĩnh vực tham gia
             </span>
+          </h2> */}
+          <h2 className="mt-4 text-3xl sm:text-4xl xl:text-5xl font-pj font-bold text-teal-600 text-center mb-[80px] ">
+            Lĩnh vực tham gia
           </h2>
 
-          {/* Swiper */}
+          {/* list icon */}
           <Swiper
             modules={[Navigation, Autoplay]}
             spaceBetween={20}
@@ -321,11 +323,11 @@ const HomePage: React.FC = () => {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="container mx-auto  px-6 py-6 text-center text-4xl md:text-6xl font-bold"
+        className="container mx-auto  px-6 py-6 text-center text-4xl md:text-5xl font-bold"
       >
-        <h1 className="bg-teal-600  bg-clip-text text-transparent">
+        <h2 className="bg-teal-600  bg-clip-text text-transparent">
           Đối tác chiến lược
-        </h1>
+        </h2>
       </motion.div>
 
       {/* Logo Ticker */}
