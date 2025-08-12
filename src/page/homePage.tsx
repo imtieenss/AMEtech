@@ -58,6 +58,7 @@ const HomePage: React.FC = () => {
     setIndex((index - 1 + introData.length) % introData.length);
   const current = introData[index];
 
+
   return (
     <>
       <div className=" h-screen ">
@@ -97,7 +98,7 @@ const HomePage: React.FC = () => {
           ))}
         </div>
 
-        {/* slide 1 */}
+        {/* slide */}
         <div className="relative grid grid-cols-[50px_1fr_50px] pt-[70px]  container mx-auto  h-3/4   ">
           {/* prevSlide */}
           <div className=" flex justify-center items-center ml-[20px] ">
@@ -117,7 +118,7 @@ const HomePage: React.FC = () => {
                 <h1 className="text-4xl md:text-5xl font-semibold mt-[10px]  ">
                   {current.text}
                 </h1>
-                <p className="text-xl md:text-2xl text-justify mt-[10px]   md:w-1/2 ">
+                <p className="text-xl md:text-2xl text-justify mt-[10px]   md:w-3/4 ">
                   {current.description}
                 </p>
                 <div>
@@ -131,7 +132,9 @@ const HomePage: React.FC = () => {
               </AnimatePresence>
             </div>
           </div>
+          {/* //---------- */}
 
+   
           {/* nextSlide */}
           <div className=" flex justify-center items-center mr-[20px]  ">
             <button
@@ -187,9 +190,8 @@ const HomePage: React.FC = () => {
       <section className="bg-white text-black py-12 container mx-auto  ">
         <h2 className="text-3xl md:text-4xl font-bold mb-[60px] md:mb-[70px] text-center  mt-[700px] md:mt-[50px] tex-600 ">
           <span className="    font-bold text-teal-600  ">
-               Dịch vụ hoạt động
-           </span>
-          
+            Dịch vụ hoạt động
+          </span>
         </h2>
 
         {/* Dịch vụ  và sản phẩm màn to */}
@@ -269,11 +271,9 @@ const HomePage: React.FC = () => {
       <section className="py-12 bg-white   ">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl   text-center mb-[80px] ">
-
             <span className="   font-bold text-teal-600  ">
-                Lĩnh vực tham gia
-           </span>
-           
+              Lĩnh vực tham gia
+            </span>
           </h2>
 
           {/* Swiper */}
@@ -317,17 +317,16 @@ const HomePage: React.FC = () => {
         <TestimonialSection />
       </div>
 
-
       <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }} 
-                className="container mx-auto  px-6 py-6 text-center text-4xl md:text-6xl font-bold"
-                > 
-                    <h1 className="bg-teal-600  bg-clip-text text-transparent">
-                    Đối tác chiến lược
-                    </h1>
-            </motion.div>
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="container mx-auto  px-6 py-6 text-center text-4xl md:text-6xl font-bold"
+      >
+        <h1 className="bg-teal-600  bg-clip-text text-transparent">
+          Đối tác chiến lược
+        </h1>
+      </motion.div>
 
       {/* Logo Ticker */}
       <div className="overflow-hidden py-3 mt-6">
@@ -347,62 +346,6 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
-
-// const serviceData = [
-//   {
-//     image: IT,
-//     title: (<>  Công nghệ <br/> thông tin </>),
-//     content:
-//       "Thiết kế nhiều các hệ thống mạng và phần mềm cho các dự án trọng điểm mang tính chất quốc gia ",
-//   },
-//   {
-//     image: CAM,
-//     title: "Camera giám sát",
-//     content:
-//       "Lắp đặt và quản trị sử dụng hệ thống Camera kĩ thuật số để giám sát giao thông; an ninh của công ty, chung cư, tòa nhà… ",
-//   },
-//   {
-//     image: BAOMAT,
-//     title: "Bảo mật hệ thống ",
-//     content:
-//       "cung cấp cho các giải pháp bảo mật tối ưu nhất với mọi yêu cầu của khách hàng. ",
-//   },
-//   {
-//     image: MAYCHU,
-//     title: "Hệ thống máy chủ và lưu trữ",
-//     content: (
-//       <>
-//         Tích hợp và xây dựng giải pháp lưu trữ tối ưu cho hệ thống thông tin của
-//         khách hàng, cho phép khách hàng nâng cao khả năng quản lý, tăng hiệu
-//         năng truy xuất, đảm bảo tính ổn định, sẵn sàng và độ an toàn của dữ
-//         liệu.
-//       </>
-//     ),
-//   },
-//   {
-//     image: MANHINHLON,
-//     title: "Hệ thống màn hình lớn",
-//     content: (
-//       <>
-//         Màn hình tấm lớn được ghép thành từ nhiều mô-đun bằng kỹ thuật ghép nối
-//         đặc biệt sẽ trở thành một màn hình lớn duy nhất. Người sử dụng có thể
-//         hiển thị các nguồn tín hiệu video ở bất cứ vị trí nào trên màn hình.
-//       </>
-//     ),
-//   },
-//   {
-//     image: HOINGHI,
-//     title: (<>  Hội nghị <br/> truyền hình </>),
-//     content: (
-//       <>
-//         Hội nghị truyền hình (Video conference) cho phép những người tham dự tại
-//         nhiều địa điểm từ những quốc gia khác nhau có thể nhìn thấy và trao đổi
-//         trực tiếp với nhau qua màn hình tivi như đang họp trong cùng một căn
-//         phòng.
-//       </>
-//     ),
-//   },
-// ];
 
 const serviceData = [
   {
@@ -444,7 +387,8 @@ const serviceData = [
     image: HOINGHI,
     title: (
       <>
-        Hội nghị <br /> truyền hình
+        {" "}
+        Hội nghị <br /> truyền hình{" "}
       </>
     ),
     content:
@@ -453,62 +397,15 @@ const serviceData = [
 ];
 
 //==================
-// const introData = [
-//   {
-//     title: "Chúng tôi là",
-//     text: <>ATN Technology company limited</>,
-//     description: (
-//       <>
-//         Với mục tiêu cung cấp phần mềm chất lượng cao, tối ưu hóa quy trình công
-//         việc, tăng năng suất và tiết kiệm chi phí. Cùng với sự phát triển của
-//         ngành Viễn thông và Tin học, ATN TECH. LTD cũng đã phát triển mạnh mẽ cả
-//         về cơ sở vật chất, khoa học công nghệ và năng lực cán bộ.
-//       </>
-//     ),
-//     textnext: " Tải hồ sơ công ty ",
-//     link: " # ",
-//     image: AMEINTRO,
-//   },
-//   {
-//     title: "Tối ưu hạ tầng",
-//     text: "Dữ liệu đám mây và cơ sở dữ liệu",
-//     description: [""],
-//     textnext: " ",
-//     link: "  ",
-//     image: CLOUD,
-//   },
-//   {
-//     title: "Bảo mật cơ sở ",
-//     text: "Bảo  mật và an toàn thông tin ",
-//     description: [""],
-//     textnext: " tải hồ sơ ",
-//     link: " # ",
-//     image: SECURITY,
-//   },
-//   {
-//     title: "",
-//     text: "ứng dụng công nghệ vào y tế",
-//     description: [""],
-//     textnext: "  ",
-//     link: " # ",
-//     image: YSINH,
-//   },
-//   {
-//     title: "",
-//     text: "giải pháp hạ tầng mạng",
-//     description: [""],
-//     textnext: "  ",
-//     link: " # ",
-//     image: NETWORK,
-//   },
-// ];
 const introData = [
   {
     title: "Chúng tôi là",
     text: <>AME Technology Company Limited</>,
     description: (
       <>
-        Chúng tôi chuyên cung cấp phần mềm chất lượng cao, giúp doanh nghiệp tối ưu hóa quy trình làm việc, nâng cao hiệu suất và tiết kiệm chi phí vận hành trong thời đại số.
+        Chúng tôi chuyên cung cấp phần mềm chất lượng cao, giúp doanh nghiệp tối
+        ưu hóa quy trình làm việc, nâng cao hiệu suất và tiết kiệm chi phí vận
+        hành trong thời đại số.
       </>
     ),
     textnext: "Tải hồ sơ công ty",
@@ -520,7 +417,9 @@ const introData = [
     text: "Giải pháp đám mây & dữ liệu",
     description: (
       <>
-        Chúng tôi xây dựng các hệ thống lưu trữ dữ liệu trên nền tảng đám mây an toàn, linh hoạt và có khả năng mở rộng cao, phù hợp với mọi quy mô doanh nghiệp.
+        Chúng tôi xây dựng các hệ thống lưu trữ dữ liệu trên nền tảng đám mây an
+        toàn, linh hoạt và có khả năng mở rộng cao, phù hợp với mọi quy mô doanh
+        nghiệp.
       </>
     ),
     textnext: "Tìm hiểu thêm",
@@ -532,7 +431,9 @@ const introData = [
     text: "An toàn dữ liệu & hệ thống",
     description: (
       <>
-        Đảm bảo an toàn toàn diện cho hạ tầng CNTT thông qua các giải pháp bảo mật hiện đại, ngăn chặn rủi ro và bảo vệ dữ liệu khỏi các mối đe dọa ngày càng tinh vi.
+        Đảm bảo an toàn toàn diện cho hạ tầng CNTT thông qua các giải pháp bảo
+        mật hiện đại, ngăn chặn rủi ro và bảo vệ dữ liệu khỏi các mối đe dọa
+        ngày càng tinh vi.
       </>
     ),
     textnext: "Tìm hiểu thêm",
@@ -541,10 +442,11 @@ const introData = [
   },
   {
     title: "Công nghệ y tế",
-    text: "Ứng dụng số trong chăm sóc sức khỏe",
+    text: "Ứng dụng số chăm sóc sức khỏe",
     description: (
       <>
-        Chúng tôi cung cấp giải pháp công nghệ giúp nâng cao hiệu quả quản lý, khám chữa bệnh và chăm sóc sức khỏe, góp phần hiện đại hóa ngành y tế.
+        Chúng tôi cung cấp giải pháp công nghệ giúp nâng cao hiệu quả quản lý,
+        khám chữa bệnh và chăm sóc sức khỏe, góp phần hiện đại hóa ngành y tế.
       </>
     ),
     textnext: "Khám phá ngay",
@@ -556,7 +458,9 @@ const introData = [
     text: "Hạ tầng kết nối hiện đại",
     description: (
       <>
-        Thiết kế và triển khai hạ tầng mạng mạnh mẽ, ổn định và an toàn, đảm bảo kết nối liên tục cho các hệ thống công nghệ thông tin trong doanh nghiệp.
+        Thiết kế và triển khai hạ tầng mạng mạnh mẽ, ổn định và an toàn, đảm bảo
+        kết nối liên tục cho các hệ thống công nghệ thông tin trong doanh
+        nghiệp.
       </>
     ),
     textnext: "Xem chi tiết",
@@ -564,8 +468,6 @@ const introData = [
     image: NETWORK,
   },
 ];
-
-
 
 //============
 const categories = [

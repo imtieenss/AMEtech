@@ -97,7 +97,7 @@ const Navbar = () => {
             <div className="flex items-center ">
               <FaPhoneAlt className="text-lg mr-[8px]" />
               <div className=" text-lg">
-                <p>0976618962</p>
+                <p>0826611611</p>
               </div>
             </div>
           </div>

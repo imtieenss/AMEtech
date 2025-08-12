@@ -68,7 +68,7 @@ const ContactPage: React.FC = () => {
                         >
                         <FaPhoneAlt className="text-xl mr-3" />
                         <div>
-                            <p>0976618962</p>
+                            <p>0826611611</p>
                             <p className="text-sm text-gray-600">Phone Number</p>
                         </div>
                         </motion.div>
