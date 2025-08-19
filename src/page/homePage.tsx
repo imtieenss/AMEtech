@@ -87,11 +87,10 @@ const HomePage: React.FC = () => {
               key={i}
               onClick={() => setIndex(i)}
               className={`w-4 h-4 rounded-full border
-                        ${
-                          index === i
-                            ? "bg-white"
-                            : "bg-transparent border-white"
-                        }
+                        ${index === i
+                  ? "bg-white"
+                  : "bg-transparent border-white"
+                }
                         transition-all duration-300 `}
             />
           ))}
@@ -191,7 +190,7 @@ const HomePage: React.FC = () => {
             Dịch vụ hoạt động
           </span>
         </h2>
-        
+
 
         {/* Dịch vụ  và sản phẩm màn to */}
         <div className="  hidden md:block ">
