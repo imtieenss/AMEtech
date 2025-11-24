@@ -10,6 +10,7 @@ import ServicePage from "./page/servicePage";
 // import SolutionPage from "./page/solutionPage";
 import Icons from "./components/icon"
 import ScrollToTop from "./components/ScrollToTop"  ;
+import ProjectDetailPage from "./page/dataProduce/projectDetailPage";
 
 const App: React.FC = () => {
     return (
@@ -23,7 +24,7 @@ const App: React.FC = () => {
                     <Route path="/profilePage" element={<ProfilePage />} />
                     <Route path="/producePage" element={<ProducePage />} />
                     <Route path="/servicePage" element={<ServicePage />} />
-                    {/* <Route path="/solutionPage" element={<SolutionPage />} /> */}
+                    <Route path="/producePage/:projectId" element={<ProjectDetailPage />} />
                     <Route path="/contactPage" element={<ContactPage />} />
                     <Route path="*" element={<div>NotFoundPage</div>} /> 
                 </Routes>
