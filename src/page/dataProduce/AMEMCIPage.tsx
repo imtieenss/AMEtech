@@ -131,7 +131,11 @@ const AMEMCIPage: React.FC = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent 
+                              opacity-100
+                              md:opacity-0 md:group-hover:opacity-100
+                              transition-opacity duration-300 flex items-end"
+              >
                 <div className="p-6 text-white">
                   <h3 className="text-xl font-bold mb-2">Dashboard Thống kê</h3>
                   <p className="text-sm text-gray-200">Biểu đồ và chỉ số hoạt động real-time</p>
@@ -148,7 +152,11 @@ const AMEMCIPage: React.FC = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent 
+                              opacity-100
+                              md:opacity-0 md:group-hover:opacity-100
+                              transition-opacity duration-300 flex items-end"
+              >
                 <div className="p-6 text-white">
                   <h3 className="text-xl font-bold mb-2">Menu Điều khiển</h3>
                   <p className="text-sm text-gray-200">Giao diện điều khiển thiết bị từ xa</p>
@@ -165,7 +173,11 @@ const AMEMCIPage: React.FC = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent 
+                              opacity-100
+                              md:opacity-0 md:group-hover:opacity-100
+                              transition-opacity duration-300 flex items-end"
+              >
                 <div className="p-6 text-white">
                   <h3 className="text-xl font-bold mb-2">Giám sát Thiết bị</h3>
                   <p className="text-sm text-gray-200">Theo dõi trạng thái và thông số thiết bị</p>
@@ -182,7 +194,11 @@ const AMEMCIPage: React.FC = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent 
+                              opacity-100
+                              md:opacity-0 md:group-hover:opacity-100
+                              transition-opacity duration-300 flex items-end"
+              >
                 <div className="p-6 text-white">
                   <h3 className="text-xl font-bold mb-2">Bản đồ thiết bị</h3>
                   <p className="text-sm text-gray-200">Xem vị trí và trạng thái thiết bị trên bản đồ</p>
