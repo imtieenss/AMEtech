@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, Calendar, Server, Cpu, Shield, TrendingUp, Bell, Settings, Network, Smartphone } from 'lucide-react';
+import { ArrowLeft, Calendar, Server, Cpu, Shield, TrendingUp, Bell, Settings, Network } from 'lucide-react';
 import AMEDASHBOARD from '../../assets/images/Produce/ameIOT/dashboardAME.png';
 import AMEDieuKhien from '../../assets/images/Produce/ameIOT/AMEDieuKhien.png';
 import AMEThongKe from '../../assets/images/Produce/ameIOT/AMEThongKe.png';
